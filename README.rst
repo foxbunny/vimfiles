@@ -28,6 +28,11 @@ The configuration covers the following languages:
 - CoffeeScript
 - Shell scripts
 
+Screenshot
+==========
+
+.. figure:: screenshot.png
+
 License
 =======
 
