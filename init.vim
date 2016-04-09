@@ -140,10 +140,6 @@ au FileType make setlocal noet tw=4 sw=4 sts=0 tw=0
 " EDITING OPTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Use standard omnicompletion for Python
-au FileType python setlocal omnifunc=pythoncomplete#Complete
-au FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-
 " Location of the undo save files
 set undodir=~/.vim_undo
 
