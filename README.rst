@@ -18,6 +18,7 @@ The following is included:
 - python-indent
 - python-syntax
 - syntastic
+- lightline
 
 The configuration covers the following languages:
 
