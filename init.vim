@@ -118,34 +118,23 @@ set textwidth=79
 " Overrides for different filetypes
 
 " HTML
-au FileType html setlocal textwidth=0
+au FileType html setlocal tw=0
 
 " Mako template
-au FileType mako setlocal textwidth=0
-au FileType mako setlocal sw=4
-au FileType mako setlocal ts=4
-au FileType mako setlocal sts=4
+au FileType mako setlocal tw=0 sw=4 ts=4 sts=4
 
 " reStructured text
-au FileType rst setlocal textwidth=79
-au FileType rst setlocal sw=4
-au FileType rst setlocal ts=4
-au FileType rst setlocal sts=4
+au FileType rst setlocal tw=79 sw=4 ts=4 sts=4
 
 " CSS and SCSS
-au FileType css setlocal sw=2
-au FileType css setlocal ts=2
-au FileType css setlocal sts=2
-au FileType css setlocal textwidth=0
-au FileType scss setlocal sw=2
-au FileType scss setlocal ts=2
-au FileType scss setlocal sts=2
-au FileType scss setlocal textwidth=0
+au FileType css setlocal sw=2 ts=2 sts=2 tw=0
+au FileType scss setlocal sw=2 ts=2 sts=2 tw=0 
 
-"BASH script settings 
-autocmd FileType sh setlocal sw=2
-autocmd FileType sh setlocal ts=2
-autocmd FileType sh setlocal sts=2
+" BASH script settings 
+au FileType sh setlocal sw=2 ts=2 sts=2
+
+" Make
+au FileType make setlocal noet tw=4 sw=4 sts=0 tw=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EDITING OPTIONS
