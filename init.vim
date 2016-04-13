@@ -136,6 +136,9 @@ au FileType sh setlocal sw=2 ts=2 sts=2
 " Make
 au FileType make setlocal noet tw=4 sw=4 sts=0 tw=0
 
+" dosini
+au FileType ini setlocal tw=4 sw=4 sts=4 tw=0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EDITING OPTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
