@@ -50,7 +50,7 @@ autocmd InsertEnter * set cursorline
 colorscheme lucius
 
 " Color scheme style
-set background=light
+set background=dark
 
 " Enable status line
 set laststatus=2
@@ -218,3 +218,11 @@ endfunction
 
 " Automatically strip trailing whitespace for the following formats
 au BufWritePre *.py,*.tpl,*.css,*.coffee,*.scss :call <SID>StripTrailingWhitespaces()
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PYTHON
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+noremap <silent> <leader>t :!tox<CR>
+noremap <silent> <leader>T :!tox -- %:p<CR>
