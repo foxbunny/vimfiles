@@ -56,7 +56,7 @@ set background=light
 set laststatus=2
 
 let g:lightline = {
-      \ 'colorscheme': 'lucius',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
