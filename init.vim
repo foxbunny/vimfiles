@@ -160,6 +160,10 @@ let g:syntastic_rst_checkers = []
 let g:syntastic_cpp_check_header = 1
 hi SyntasticError guifg=red
 
+" Searching is case sensitive only when input includes uppercase letters
+set ignorecase
+set smartcase
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SHORTCUTS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
