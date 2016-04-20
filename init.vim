@@ -112,6 +112,10 @@ set tabstop=4
 " Default soft-tab width (e.g., when tabbing with spaces)
 set softtabstop=4
 
+" Amount of indentation (in spaces) when using indentation commands and
+" autoindent.
+set shiftwidth=4
+
 " Right margin
 set textwidth=79
 
