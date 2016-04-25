@@ -95,6 +95,7 @@ endif
 
 " Map some extensions to file types manually
 au BufNewFile,BufRead,BufWrite *.tpl setlocal ft=mako
+au BufNewFile,BufRead,BufWrite *.in setlocal ft=make
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORMATTING OPTIONS
