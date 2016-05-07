@@ -73,6 +73,12 @@ let g:lightline = {
       \ },
       \ }
 
+" Do not cause the long lines to wrap into the next line
+set nowrap
+
+" When soft wrap is enabled (`set wrap`), let lines wrap at word boundaries
+set linebreak
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE HANDLING OPTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -95,7 +101,7 @@ endif
 
 " Map some extensions to file types manually
 au BufNewFile,BufRead,BufWrite *.tpl setlocal ft=mako
-au BufNewFile,BufRead,BufWrite *.in setlocal ft=make
+au BufNewFile,BufRead,BufWrite Config.in setlocal ft=make
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FORMATTING OPTIONS
