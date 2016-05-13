@@ -73,6 +73,29 @@ let g:lightline = {
       \ },
       \ }
 
+if has("gui_running")
+  " Remove toolbar and other annoying bits and pieces
+  set guioptions-=T
+  set guioptions-=l
+  set guioptions-=L
+  set guioptions-=r
+  set guioptions-=R
+  set guioptions-=e
+
+  " Set GUI fonts
+  if has("unix")
+    set guifont="Bistream Vera Sans Mono 11"
+    set guifontwide="MS Gothic 11"
+  else
+    set guifont=Bitstream_Vera_Sans_Mono:h11:cANSI
+    set guifontwide=MS_Gothic:h11
+  endif
+
+  " Maximize window
+  set lines=999 columns=999
+  au GUIEnter * simalt ~x
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE HANDLING OPTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
