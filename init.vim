@@ -37,7 +37,9 @@ set number
 set showmatch
 
 " Whitespace characters
-set listchars=tab:⇥\ ,eol:↵
+if has("unix")
+    set listchars=tab:⇥\ ,eol:↵
+endif
 
 " Show whitespace characters
 set list
