@@ -19,6 +19,9 @@ The following is included:
 - python-syntax
 - syntastic
 - lightline
+- vim-javascript
+- vim-jsx
+- html5.vim
 
 The configuration covers the following languages:
 
@@ -26,6 +29,8 @@ The configuration covers the following languages:
 - SASS/SCSS
 - Mako templates
 - CoffeeScript
+- JavaScript and JSX
+- HTML5
 - Shell scripts
 
 Screenshot
