@@ -165,6 +165,7 @@ au FileType rst setlocal tw=79 sw=4 ts=4 sts=4
 " CSS and SCSS
 au FileType css setlocal sw=2 ts=2 sts=2 tw=0
 au FileType scss setlocal sw=2 ts=2 sts=2 tw=0 
+au FileType javascript setlocal sw=2 ts=2 sts=2 tw=79
 
 " BASH script settings 
 au FileType sh setlocal sw=2 ts=2 sts=2
