@@ -267,3 +267,13 @@ au BufWritePre *.py,*.tpl,*.css,*.coffee,*.scss :call <SID>StripTrailingWhitespa
 
 noremap <silent> <leader>t :!tox<CR>
 noremap <silent> <leader>T :!tox -- %:p<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CTRLP ignore
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if has("unix")
+    set wildignore+=*/node_modules/*,*.swp,*.zip,*.exe,*.pyc
+else
+    set wildignore+=*\\node_modules\\*,*.swp,*.zip,*.exe,*.pyc
+endif
