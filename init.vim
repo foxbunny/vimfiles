@@ -154,7 +154,7 @@ set textwidth=79
 " Overrides for different filetypes
 
 " HTML
-au FileType html setlocal tw=0
+au FileType html setlocal sw=2 ts=2 sts=2 tw=0
 
 " Mako template
 au FileType mako setlocal tw=0 sw=4 ts=4 sts=4
