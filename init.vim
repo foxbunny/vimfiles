@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 "Turn off vi compatibility
 set nocompatible
 
@@ -37,9 +40,7 @@ set number
 set showmatch
 
 " Whitespace characters
-if has("unix")
-  set listchars=tab:⇥\ ,eol:↵
-endif
+set listchars=eol:¶,tab:→\ ,space:·
 
 " Show whitespace characters
 set list
