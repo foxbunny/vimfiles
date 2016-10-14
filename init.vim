@@ -139,14 +139,14 @@ set autoindent
 set expandtab
 
 " Defalt tab width in spaces
-set tabstop=4
+set tabstop=2
 
 " Default soft-tab width (e.g., when tabbing with spaces)
-set softtabstop=4
+set softtabstop=2
 
 " Amount of indentation (in spaces) when using indentation commands and
 " autoindent.
-set shiftwidth=4
+set shiftwidth=2
 
 " Right margin
 set textwidth=79
@@ -154,7 +154,7 @@ set textwidth=79
 " Overrides for different filetypes
 
 " HTML
-au FileType html setlocal sw=2 ts=2 sts=2 tw=0
+au FileType html setlocal tw=0
 
 " Mako template
 au FileType mako setlocal tw=0 sw=4 ts=4 sts=4
