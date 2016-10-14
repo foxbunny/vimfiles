@@ -38,7 +38,7 @@ set showmatch
 
 " Whitespace characters
 if has("unix")
-    set listchars=tab:⇥\ ,eol:↵
+  set listchars=tab:⇥\ ,eol:↵
 endif
 
 " Show whitespace characters
@@ -119,9 +119,9 @@ set encoding=utf-8
 " Yank to system clipboard
 " (see http://vim.wikia.com/wiki/Accessing_the_system_clipboard)
 if has("unix")
-    set clipboard=unnamedplus
+  set clipboard=unnamedplus
 else
-    set clipboard=unnamed
+  set clipboard=unnamed
 endif
 
 " Map some extensions to file types manually
@@ -245,14 +245,14 @@ noremap <silent> <leader>S :Gcommit --signoff<CR>
 
 " Clean up trailing spaces
 function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".") " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".") " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
 endfunction
 
 " Automatically strip trailing whitespace for the following formats
@@ -271,7 +271,7 @@ noremap <silent> <leader>T :!tox -- %:p<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if has("unix")
-    set wildignore+=*/node_modules/*,*.swp,*.zip,*.exe,*.pyc
+  set wildignore+=*/node_modules/*,*.swp,*.zip,*.exe,*.pyc
 else
-    set wildignore+=*\\node_modules\\*,*.swp,*.zip,*.exe,*.pyc
+  set wildignore+=*\\node_modules\\*,*.swp,*.zip,*.exe,*.pyc
 endif
