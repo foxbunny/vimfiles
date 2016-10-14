@@ -159,17 +159,14 @@ au FileType html setlocal tw=0
 " Mako template
 au FileType mako setlocal tw=0 sw=4 ts=4 sts=4
 
+" Mako template
+au FileType python setlocal tw=0 sw=4 ts=4 sts=4
+
 " reStructured text
 au FileType rst setlocal tw=79 sw=4 ts=4 sts=4
 
-" CSS and SCSS
-au FileType css setlocal sw=2 ts=2 sts=2 tw=0
-au FileType scss setlocal sw=2 ts=2 sts=2 tw=0 
-au FileType javascript setlocal sw=2 ts=2 sts=2 tw=79
-au FileType vue setlocal sw=2 ts=2 sts=2 tw=79
-
-" BASH script settings 
-au FileType sh setlocal sw=2 ts=2 sts=2
+" VueJS
+au FileType vue setlocal tw=0
 
 " Make
 au FileType make setlocal noet tw=4 sw=4 sts=0 tw=0
