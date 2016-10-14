@@ -31,9 +31,6 @@
 [submodule "bundle/vim-mako"]
 	path = bundle/vim-mako
 	url = https://github.com/sophacles/vim-bundle-mako.git
-[submodule "bundle/auto-pairs"]
-	path = bundle/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
