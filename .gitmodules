@@ -43,6 +43,6 @@
 [submodule "bundle/html5"]
 	path = bundle/html5
 	url = https://github.com/othree/html5.vim.git
-[submodule "bundle\\vim-vue"]
-	path = bundle\\vim-vue
+[submodule "bundle/vim-vue"]
+	path = bundle/vim-vue
 	url = https://github.com/posva/vim-vue.git
