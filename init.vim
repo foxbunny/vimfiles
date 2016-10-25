@@ -191,7 +191,8 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_python_checkers = ["flake8"]
-let g:syntastic_javascript_checkers = ["jshint"]
+let g:syntastic_javascript_checkers = ["eslint"]
+let g:syntastic_vue_checkers = []
 let g:syntastic_rst_checkers = []
 let g:syntastic_cpp_check_header = 1
 hi SyntasticError guifg=red
@@ -257,7 +258,7 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 
 " Automatically strip trailing whitespace for the following formats
-au BufWritePre *.py,*.tpl,*.css,*.coffee,*.js,*.vue,*.scss :call <SID>StripTrailingWhitespaces()
+au BufWritePre *.py,*.tpl,*.css,*.coffee,*.js,*.vue,*.scss,*.ls :call <SID>StripTrailingWhitespaces()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
