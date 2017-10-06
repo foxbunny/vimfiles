@@ -93,11 +93,11 @@ if has("gui_running")
 
   " Set GUI fonts
   if has("unix")
-    set guifont="Bistream Vera Sans Mono 11"
-    set guifontwide="MS Gothic 11"
+    set guifont="Bitstream Vera Sans Mono 12"
+    set guifontwide="MS Gothic 12"
   else
-    set guifont=Bitstream_Vera_Sans_Mono:h11:cANSI
-    set guifontwide=MS_Gothic:h11
+    set guifont=Bitstream_Vera_Sans_Mono:h12:cANSI
+    set guifontwide=MS_Gothic:h12
   endif
 
   " Maximize window
