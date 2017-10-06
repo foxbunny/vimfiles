@@ -164,7 +164,7 @@ au FileType mako setlocal tw=0 sw=4 ts=4 sts=4
 au FileType python setlocal tw=0 sw=4 ts=4 sts=4
 
 " reStructured text
-au FileType rst setlocal tw=79 sw=4 ts=4 sts=4
+au FileType rst setlocal sw=4 ts=4 sts=4
 
 " VueJS
 au FileType vue setlocal tw=0
@@ -174,6 +174,9 @@ au FileType make setlocal noet tw=4 sw=4 sts=0 tw=0
 
 " dosini
 au FileType ini setlocal tw=4 sw=4 sts=4 tw=0
+
+" PureScript
+au FileType purs setlocal tw=2 sw=2 sts=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EDITING OPTIONS
