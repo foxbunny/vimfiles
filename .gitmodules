@@ -58,3 +58,15 @@
 [submodule "bundle/purescript-vim"]
 	path = bundle/purescript-vim
 	url = https://github.com/purescript-contrib/purescript-vim.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/tsuquyomi"]
+	path = bundle/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
+[submodule "bundle/vim-js-indent"]
+	path = bundle/vim-js-indent
+	url = https://github.com/jason0x43/vim-js-indent.git
+[submodule "bundle/tslint"]
+	path = bundle/tslint
+	url = https://github.com/palantir/tslint.git

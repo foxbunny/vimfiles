@@ -265,7 +265,7 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 
 " Automatically strip trailing whitespace for the following formats
-au BufWritePre *.py,*.tpl,*.css,*.coffee,*.js,*.vue,*.scss,*.ls :call <SID>StripTrailingWhitespaces()
+au BufWritePre *.py,*.tpl,*.css,*.coffee,*.js,*.vue,*.scss,*.ls,*.ts,*.tsx :call <SID>StripTrailingWhitespaces()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
