@@ -39,12 +39,6 @@ set number
 "Show matching braces
 set showmatch
 
-" Whitespace characters
-set listchars=eol:¶,tab:→\ ,space:·
-
-" Show whitespace characters
-set list
-
 " Show current line when in insert mode
 autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
