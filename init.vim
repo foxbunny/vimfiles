@@ -89,9 +89,13 @@ if has("gui_running")
   if has("unix")
     set guifont="Bitstream Vera Sans Mono 12"
     set guifontwide="MS Gothic 12"
+    " Increase line spacing +3 px
+    set lsp=3
   else
     set guifont=Bitstream_Vera_Sans_Mono:h12:cANSI
     set guifontwide=MS_Gothic:h12
+    " Increase line spacing +3 px
+    set lsp=4
   endif
 
   " Maximize window
