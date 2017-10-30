@@ -179,6 +179,9 @@ au FileType purs setlocal tw=2 sw=2 sts=2
 " Location of the undo save files
 set undodir=~/.vim_undo
 
+" Location of the swap file dir
+set directory=~/.vim_swap//,$TEMP//,.
+
 " Save undo history in a file
 set undofile
 
