@@ -290,8 +290,4 @@ noremap <silent> <leader>T :!tox -- %:p<CR>
 " CTRLP ignore
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if has("unix")
-  set wildignore+=*/node_modules/*,*.swp,*.zip,*.exe,*.pyc
-else
-  set wildignore+=*\\node_modules\\*,*.swp,*.zip,*.exe,*.pyc
-endif
+set wildignore+=*.swp,*.zip,*.exe,*.pyc,node_modules
