@@ -1,3 +1,4 @@
+===================
 Foxbunny's vimfiles
 ===================
 
@@ -7,31 +8,123 @@ files in sync between machines, I'm putting it up here.
 
 The following is included:
 
-- Pathogen
-- Sensible
-- NERDTree
-- CtrlP
-- Fugitive
-- Gundo
-- Mako bundle
-- Color sampler pack 2012
-- python-indent
-- python-syntax
-- syntastic
-- lightline
-- vim-javascript
-- vim-jsx
-- html5.vim
+- autoclose (automatically close matching parenthesis and brackets)
+- autoclosetag (automatically close XML/HTML tags)
+- Color sampler pack 2012 (more color schemes than you can handle)
+- CtrlP (quickly open files with fuzzy matching)
+- EditorConfig (automatically configure indentation, may not work)
+- Fugitive (the best Git plugin in any editor or IDE, period)
+- Gundo (branching undo)
+- html5.vim (HTML 5 support)
+- Lightline (awesome and informative status lines)
+- Mako bundle (Mako template support)
+- NERDTree (file browser)
+- Pathogen (plugin manager)
+- python-indent (Python indentation)
+- python-syntax (Python syntax highlighting)
+- Sensible (sensible defaults for Vim)
+- Syntastic (metalinter for most languages)
+- TSLint (TypeScript linter support)
+- Tsuquyomi (TypeScript intellisense and code checking)
+- vim-javascript (Better JavaScript highlighting and indentation)
+- vim-jsx (JSX support)
+- vim-mako (Mako template language support)
+- vim-vue (VueJS .vue file support)
+- vimproc.vim (Support for subprocesses in some of the plugins)
 
-The configuration covers the following languages:
+The configuration covers the following languages and libraries:
 
 - Python
+- HTML5/CSS
 - SASS/SCSS
 - Mako templates
-- CoffeeScript
 - JavaScript and JSX
-- HTML5
+- TypeScript and TSX
+- VueJS
+- CoffeeScript
+- PureScript
 - Shell scripts
+
+Installation
+============
+
+To install, just clone the project to a local directory::
+
+    git clone --recursive https://github.com/foxbunny/vimfiles.git
+
+If you forgot the ``--recursive`` flag, you need two more commands:
+
+    git submodule init
+    git submodule update
+
+The ``vimproc`` plugin needs to be compiled. Under *Nix systems, you can simply
+run ``make`` in the plugin folder. On Windows, you will need to first install
+`MinGW <http://mingw.org/>`_, and then use the MinGW shell to compile the
+plugin.
+
+Finally, create two directories in your home directory or ``%userprofile%``
+folder:
+
+- ``.vim_undo`` for persistent undo
+- ``.vim_swap`` for storing swap files in a single folder
+
+Using the configuration
+=======================
+
+The configuration files are located in different locations depending on the
+OS and whether you want to use this with NeoVim or vanilla Vim.
+
+Windows w/ NeoVim
+-----------------
+
+Symlink the git folder to ``%userprofile%\AppData\Local\nvim``::
+
+    mklink /J %userprofile%\AppData\Local\nvim \path\to\vimfiles.git
+
+Windows w/ Vim
+--------------
+
+Symlink the git folder to `%userprofiles%\vimfiles`::
+
+    mklink /J %userprofile%\vimfiles
+
+Next, create the vimrc file at %userprofile%\_vimrc and put this into the
+file::
+        
+    exec 'source '.$HOME.'\vimfiles\init.vim'
+
+Linux w/ NeoVim
+---------------
+
+Symlink the git folder to ``~/.config/nvim``::
+
+    ln -s /path/to/vimfiles.git ~/.config/nvim
+
+More precisely, it uses ``$XDG_CONFIG_HOME``, which may or may not be
+``~/.config`` for your particular flavor of Linux. If ``~/.config`` does not
+work for you, subsititute it for ``$XDG_CONFIG_HOME``.
+
+Linux w/ Vim
+------------
+
+Symlink the git folder to ``~/.vim``::
+
+    ln -s /path/to/vimfiles.git ~/.vim
+
+Also symlink the main configuration file::
+    
+    ln -s /path/to/vimfiles.git/init.vim ~/.vimrc
+
+Machine-specific configuration
+==============================
+
+In some cases, the configuration needs to mention paths to various executable
+(e.g., Python interpreter in NeoVim). Since these are different for each
+platform and possibly other factors, the main configuration file will attempt
+to pull in a file called ``machine.vim`` in your home directory or
+``%userprofile%`` folder. This file may contain any of the usual NeoVim/Vim
+configuration scripts and you can use that to customize the configuration
+instead of patching the ``init.vim`` file.
 
 Screenshot
 ==========
