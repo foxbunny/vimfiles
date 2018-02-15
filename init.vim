@@ -57,7 +57,7 @@ autocmd InsertEnter * set cursorline
 colorscheme lucius
 
 " Color scheme style
-set background=dark
+set background=light
 
 " Enable status line
 set laststatus=2
