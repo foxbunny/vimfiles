@@ -21,9 +21,8 @@ let g:mapleader=","
 " PLATFORM-SPECIFIC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let $VIMHOME=expand('<sfile>:p:h')
 try
-  exec 'source '.$VIMHOME.'\machine.vim'
+  exec 'source '.$HOME.'/machine.vim'
 catch
 endtry
 
