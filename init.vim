@@ -63,22 +63,33 @@ set background=light
 set laststatus=2
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
+      \   'colorscheme': 'wombat',
+      \   'active': {
+      \     'left': [ [ 'mode', 'paste' ],
+      \               [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \   },
+      \   'component': {
+      \     'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+      \     'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \     'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \   },
+      \   'component_visible_condition': {
+      \     'readonly': '(&filetype!="help"&& &readonly)',
+      \     'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \     'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \   },
+      \   'component_function': {
+      \     'filename': 'LightlineFilename'
+      \   },
       \ }
+
+" Filename function for Lightline (show full path)
+function! LightlineFilename()
+  return expand('%')
+endfunction
+
+" We don't need to show the --INSEERT-- mode because it's part of lightline.
+set noshowmode
 
 " Do not cause the long lines to wrap into the next line
 set nowrap
