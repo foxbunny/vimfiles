@@ -247,6 +247,7 @@ noremap <silent> <leader>p :split<CR>
 " Tab navigation
 noremap <silent> <leader><Tab> :tabn<CR>
 noremap <silent> <leader><S-Tab> :tabp<CR>
+noremap <silent> <leader>t :tabnew<CR>
 
 " CtrlP shortcuts
 noremap <silent> <C-T> :tabnew<CR>:CtrlP<CR>
@@ -288,14 +289,6 @@ endfunction
 
 " Automatically strip trailing whitespace for the following formats
 au BufWritePre *.py,*.tpl,*.css,*.coffee,*.js,*.vue,*.scss,*.ls,*.ts,*.tsx :call <SID>StripTrailingWhitespaces()
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PYTHON
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-noremap <silent> <leader>t :!tox<CR>
-noremap <silent> <leader>T :!tox -- %:p<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CTRLP ignore
