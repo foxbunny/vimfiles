@@ -6,7 +6,7 @@ After a long while, I got around to cleaning up my vim configuration. Removed
 all the stuff I don't need, updated all bundles, etc. Since it sucks to keep
 files in sync between machines, I'm putting it up here.
 
-..warning ::
+.. warning ::
   This configuration is only compatible with the latest versions of Vim and
   NeoVim. In particular, it uses Minpac which relies on Vim packages support.
 
