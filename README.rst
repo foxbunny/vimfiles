@@ -6,20 +6,24 @@ After a long while, I got around to cleaning up my vim configuration. Removed
 all the stuff I don't need, updated all bundles, etc. Since it sucks to keep
 files in sync between machines, I'm putting it up here.
 
-The following is included:
+..warning ::
+  This configuration is only compatible with the latest versions of Vim and
+  NeoVim. In particular, it uses Minpac which relies on Vim packages support.
+
+The following is included (in alphabetical order):
 
 - autoclose (automatically close matching parenthesis and brackets)
-- autoclosetag (automatically close XML/HTML tags)
-- Color sampler pack 2012 (more color schemes than you can handle)
+- close-html-tags (automatically close XML/HTML tags)
 - CtrlP (quickly open files with fuzzy matching)
 - EditorConfig (automatically configure indentation, may not work)
 - Fugitive (the best Git plugin in any editor or IDE, period)
 - Gundo (branching undo)
-- html5.vim (HTML 5 support)
+- HTML5.vim (HTML 5 support)
 - Lightline (awesome and informative status lines)
+- Lucius (color theme)
 - Mako bundle (Mako template support)
+- Minpac (package manager)
 - NERDTree (file browser)
-- Pathogen (plugin manager)
 - python-indent (Python indentation)
 - python-syntax (Python syntax highlighting)
 - Sensible (sensible defaults for Vim)
@@ -114,6 +118,22 @@ Symlink the git folder to ``~/.vim``::
 Also symlink the main configuration file::
     
     ln -s /path/to/vimfiles.git/init.vim ~/.vimrc
+
+Initializing the plugins
+========================
+
+The first time you start Vim or NeoVim with this configuration, you will notice
+that many of the promised goodies don't work. This is because the plugins are
+not part of the repository, but are, instead, managed by Minpac. The first time
+you run your editor, use the following command::
+
+    :Pacsync
+
+This will download the necessary plugins from GitHub and install them under
+``pack/minpac/start``. 
+
+This command is also used when you update the ``init.vim`` file to add or
+remove pckages.
 
 Machine-specific configuration
 ==============================

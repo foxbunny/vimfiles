@@ -1,5 +1,7 @@
 *.sw[op]
 /spell
+/pack/minpac/start
+/machine.vim
+/rplugin.vim
 .netrwhist
 *~
-machine.vim

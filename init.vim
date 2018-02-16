@@ -4,9 +4,6 @@ set encoding=utf-8
 "Turn off vi compatibility
 set nocompatible
 
-" Infect everything with pathogen
-execute pathogen#infect()
-
 " Enable syntax highlighting
 syntax on
 
@@ -25,6 +22,54 @@ try
   exec 'source '.$HOME.'/machine.vim'
 catch
 endtry
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLUGINS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if exists('*minpac#init')
+  call minpac#init()
+
+  " Configuration
+  call minpac#add('tpope/vim-sensible')
+  call minpac#add('editorconfig/editorconfig-vim')
+  call minpac#add('jonathanfilip/vim-lucius')
+
+  " Usability
+  call minpac#add('scrooloose/nerdtree')
+  call minpac#add('sjl/gundo.vim')
+  call minpac#add('tpope/vim-fugitive')
+  call minpac#add('itchyny/lightline.vim')
+  call minpac#add('ctrlpvim/ctrlp.vim')
+  call minpac#add('scrooloose/syntastic')
+  call minpac#add('Townk/vim-autoclose')
+  call minpac#add('alvan/vim-closetag')
+
+  " Python
+  call minpac#add('hattya/python-indent.vim')
+  call minpac#add('hdima/python-syntax')
+  call minpac#add('sophacles/vim-bundle-mako')
+
+  " JavaScript/TypeScript
+  call minpac#add('mxw/vim-jsx')
+  call minpac#add('pangloss/vim-javascript')
+  call minpac#add('jason0x43/vim-js-indent')
+  call minpac#add('othree/html5.vim')
+  call minpac#add('posva/vim-vue')
+  call minpac#add('leafgarland/typescript-vim')
+  call minpac#add('Shougo/vimproc.vim')
+  call minpac#add('Quramy/tsuquyomi')
+
+  " Other languages
+  call minpac#add('gkz/vim-ls')
+  call minpac#add('purescript-contrib/purescript-vim')
+
+  " Package management
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
+endif
+
+" Update installed packages and removed unused ones
+command! Pacsync  packadd minpac | source $MYVIMRC | call minpac#update() | call minpac#clean()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -54,7 +99,7 @@ autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
 
 " Color scheme
-colorscheme lucius
+silent! colorscheme lucius
 
 " Color scheme style
 set background=light
