@@ -15,7 +15,6 @@ The following is included (in alphabetical order):
 - autoclose (automatically close matching parenthesis and brackets)
 - close-html-tags (automatically close XML/HTML tags)
 - CtrlP (quickly open files with fuzzy matching)
-- EditorConfig (automatically configure indentation, may not work)
 - Fugitive (the best Git plugin in any editor or IDE, period)
 - Gundo (branching undo)
 - HTML5.vim (HTML 5 support)
