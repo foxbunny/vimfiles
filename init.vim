@@ -44,6 +44,7 @@ if exists('*minpac#init')
   call minpac#add('scrooloose/syntastic')
   call minpac#add('Townk/vim-autoclose')
   call minpac#add('alvan/vim-closetag')
+  call minpac#add('tpope/vim-surround')
 
   " Python
   call minpac#add('hattya/python-indent.vim')
