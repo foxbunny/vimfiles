@@ -89,11 +89,14 @@ set showtabline=2
 " Highlight 80 columns
 set colorcolumn=80
 
-"Show line number
+" Show line number
 set number
 
-"Show matching braces
+" Show matching braces
 set showmatch
+
+" Show what search and replace would do in real time
+set inccommand=split
 
 " Show current line when in insert mode
 autocmd InsertLeave * set nocursorline
@@ -103,7 +106,7 @@ autocmd InsertEnter * set cursorline
 silent! colorscheme lucius
 
 " Color scheme style
-set background=light
+set background=dark
 
 " Enable status line
 set laststatus=2
@@ -289,6 +292,17 @@ noremap <silent> <leader>w :up<CR>
 " Splitting
 noremap <silent> <leader>v :vsplit<CR>
 noremap <silent> <leader>p :split<CR>
+
+" Toggle background
+function! ToggleBackground()
+  if (&background == "light")
+    set background=dark
+  else
+    set background=light
+  endif
+endfunction
+
+nmap <silent> <F12> :call ToggleBackground()<CR>
 
 " Tab navigation
 noremap <silent> <leader><Tab> :tabn<CR>
