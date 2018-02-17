@@ -49,6 +49,52 @@ The configuration covers the following languages and libraries:
 - PureScript
 - Shell scripts
 
+Keyboard shortcuts
+==================
+
+Leader character is ``,``.
+
+In addition to Vim/NeoVim standard shortcuts, and standard shortcuts provided
+by the plugins, the following shorctuts are also mapped:
+
+==========  ===================================================================
+Shortcut    Function
+==========  ===================================================================
+,<S-Tab>    Go to previous tab
+,<Tab>      Go to next tab
+,S          Open Git status
+,`          Toggle NerdTREE
+,f          Open NerdTREE and go to current file
+,n          Disable search highlighting
+,o          Start CtrlP
+,p          Horizontal split
+,q          Quit
+,t          New blank tab
+,u          Toggle Gundo
+,v          Vertical split
+,w          Save
+<C-t>       New tab then start CtrlP
+F8          Toggle spelling (US English)
+F12         Toggle dark and light theme
+==========  ===================================================================
+
+Autocommands
+============
+
+Whitespace at the end of the lines is stripped automatically when buffer is
+saved. This is done for the following file types:
+
+- ``*.coffee``
+- ``*.css``
+- ``*.js``
+- ``*.ls``
+- ``*.py``
+- ``*.scss``
+- ``*.tpl``
+- ``*.ts``
+- ``*.tsx``
+- ``*.vue``
+
 Installation
 ============
 
@@ -56,15 +102,15 @@ To install, just clone the project to a local directory::
 
     git clone --recursive https://github.com/foxbunny/vimfiles.git
 
-If you forgot the ``--recursive`` flag, you need two more commands:
+If you forgot the ``--recursive`` flag, you need two more commands::
 
     git submodule init
     git submodule update
 
-The ``vimproc`` plugin needs to be compiled. Under *Nix systems, you can simply
-run ``make`` in the plugin folder. On Windows, you will need to first install
-`MinGW <http://mingw.org/>`_, and then use the MinGW shell to compile the
-plugin.
+The ``vimproc`` plugin needs to be compiled. Under Linux and Mac systems, you
+can simply run ``make`` in the plugin folder. On Windows, you will need to
+first install `MinGW <http://mingw.org/>`_, and then use the MinGW shell to
+compile the plugin.
 
 Finally, create two directories in your home directory or ``%userprofile%``
 folder:
@@ -92,8 +138,8 @@ Symlink the git folder to `%userprofiles%\vimfiles`::
 
     mklink /J %userprofile%\vimfiles
 
-Next, create the vimrc file at %userprofile%\_vimrc and put this into the
-file::
+Next, create the ``.vimrc`` file at ``%userprofile%\_vimrc`` and put this into
+the file::
         
     exec 'source '.$HOME.'\vimfiles\init.vim'
 
@@ -106,7 +152,7 @@ Symlink the git folder to ``~/.config/nvim``::
 
 More precisely, it uses ``$XDG_CONFIG_HOME``, which may or may not be
 ``~/.config`` for your particular flavor of Linux. If ``~/.config`` does not
-work for you, subsititute it for ``$XDG_CONFIG_HOME``.
+work for you, substitute it for ``$XDG_CONFIG_HOME``.
 
 Linux w/ Vim
 ------------
@@ -133,7 +179,7 @@ This will download the necessary plugins from GitHub and install them under
 ``pack/minpac/start``. 
 
 This command is also used when you update the ``init.vim`` file to add or
-remove pckages.
+remove packages.
 
 Machine-specific configuration
 ==============================
