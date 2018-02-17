@@ -316,6 +316,7 @@ inoremap <silent> <C-T> <Esc>:tabnew<CR>
 " Buffers
 noremap <silent> <leader>bb :bnext<CR>
 noremap <silent> <leader>bm :bmodified<CR>
+noremap <silent> <leader>bq :bunload<CR>
 noremap <silent> <leader><Tab> :b#<CR>
 
 " CtrlP shortcuts
