@@ -58,29 +58,29 @@ Leader character is ``,``.
 In addition to Vim/NeoVim standard shortcuts, and standard shortcuts provided
 by the plugins, the following shorctuts are also mapped:
 
-==================  ===========================================================
-Shortcut            Function
-==================  ===========================================================
-``,`` ``Tab``       Go to last buffer (``:b#``)
-``,`` ``S``         Open Git status
-``,``               Toggle NerdTREE
-``,`` ``b`` ``b``   Switch to next buffer
-``,`` ``b`` ``l``   Start CtrlP in buffer mode
-``,`` ``b`` ``m``   Switch to next modified buffer
-``,`` ``f``         Open NerdTREE and go to current file
-``,`` ``n``         Disable search highlighting
-``,`` ``o``         Start CtrlP
-``,`` ``p``         Horizontal split
-``,`` ``q``         Quit
-``,`` ``t`` ``p``   Switch to previous tab
-``,`` ``t`` ``t``   Switch to next tab
-``,`` ``u``         Toggle Gundo
-``,`` ``v``         Vertical split
-``,`` ``w``         Save
-``C-t``             Create a new tab
-``F8``              Toggle spelling (US English)
-``F12``             Toggle dark and light theme
-==================  ===========================================================
+==================  ================  =========================================
+Shortcut            Name              Function
+==================  ================  =========================================
+``,`` ``Tab``       last buffer       Go to last buffer (``:b#``)
+``,`` ``S``         git status        Open Git status
+``,`` `````         file list         Toggle NerdTREE
+``,`` ``b`` ``b``   next buffer       Switch to next buffer
+``,`` ``b`` ``l``   list buffers      Start CtrlP in buffer mode
+``,`` ``b`` ``m``   modified buffer   Switch to next modified buffer
+``,`` ``f``         find current      Open NerdTREE and go to current file
+``,`` ``n``         no highlight      Disable search highlighting
+``,`` ``o``         open with CtrlP   Start CtrlP
+``,`` ``p``         split horiz.      Horizontal split
+``,`` ``q``         quit              Quit
+``,`` ``t`` ``p``   previous tab      Switch to previous tab
+``,`` ``t`` ``t``   next tab          Switch to next tab
+``,`` ``u``         gundo             Toggle Gundo
+``,`` ``v``         split verit.      Vertical split
+``,`` ``w``         write             Save current buffer
+``C-t``             new tab           Create a new tab
+``F8``              spell on/off      Toggle spelling (US English)
+``F12``             color theme       Toggle dark and light theme
+==================  ================  =========================================
 
 Autocommands
 ============

@@ -310,18 +310,17 @@ nmap <silent> <F12> :call ToggleBackground()<CR>
 " Tab navigation
 noremap <silent> <leader>tt :tabn<CR>
 noremap <silent> <leader>tp :tabp<CR>
-noremap <silent> <leader>tn :tabnew<CR>
+noremap <silent> <C-T> :tabnew<CR>
+inoremap <silent> <C-T> <Esc>:tabnew<CR>
 
 " Buffers
 noremap <silent> <leader>bb :bnext<CR>
-noremap <silent> <leader>bl :CtrlPBuffer<CR>
 noremap <silent> <leader>bm :bmodified<CR>
 noremap <silent> <leader><Tab> :b#<CR>
 
 " CtrlP shortcuts
-noremap <silent> <C-T> :tabnew<CR>:CtrlP<CR>
-inoremap <silent> <C-T> <Esc>:tabnew<CR>:CtrlP<CR>
 noremap <silent> <leader>o :CtrlP<CR>
+noremap <silent> <leader>bl :CtrlPBuffer<CR>
 
 "Map NERDTree
 nmap <silent> <leader>` :NERDTreeToggle<CR>  
