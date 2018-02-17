@@ -29,6 +29,7 @@ The following is included (in alphabetical order):
 - Syntastic (metalinter for most languages)
 - TSLint (TypeScript linter support)
 - Tsuquyomi (TypeScript intellisense and code checking)
+- vim-bufferline (Show a list of buffers in the command line)
 - vim-javascript (Better JavaScript highlighting and indentation)
 - vim-jsx (JSX support)
 - vim-mako (Mako template language support)
@@ -57,26 +58,29 @@ Leader character is ``,``.
 In addition to Vim/NeoVim standard shortcuts, and standard shortcuts provided
 by the plugins, the following shorctuts are also mapped:
 
-==========  ===================================================================
-Shortcut    Function
-==========  ===================================================================
-,<S-Tab>    Go to previous tab
-,<Tab>      Go to next tab
-,S          Open Git status
-,`          Toggle NerdTREE
-,f          Open NerdTREE and go to current file
-,n          Disable search highlighting
-,o          Start CtrlP
-,p          Horizontal split
-,q          Quit
-,t          New blank tab
-,u          Toggle Gundo
-,v          Vertical split
-,w          Save
-<C-t>       New tab then start CtrlP
-F8          Toggle spelling (US English)
-F12         Toggle dark and light theme
-==========  ===================================================================
+==================  ===========================================================
+Shortcut            Function
+==================  ===========================================================
+``,`` ``Tab``       Go to last buffer (``:b#``)
+``,`` ``S``         Open Git status
+``,``               Toggle NerdTREE
+``,`` ``b`` ``b``   Switch to next buffer
+``,`` ``b`` ``l``   Start CtrlP in buffer mode
+``,`` ``b`` ``m``   Switch to next modified buffer
+``,`` ``f``         Open NerdTREE and go to current file
+``,`` ``n``         Disable search highlighting
+``,`` ``o``         Start CtrlP
+``,`` ``p``         Horizontal split
+``,`` ``q``         Quit
+``,`` ``t`` ``p``   Switch to previous tab
+``,`` ``t`` ``t``   Switch to next tab
+``,`` ``u``         Toggle Gundo
+``,`` ``v``         Vertical split
+``,`` ``w``         Save
+``C-t``             Create a new tab
+``F8``              Toggle spelling (US English)
+``F12``             Toggle dark and light theme
+==================  ===========================================================
 
 Autocommands
 ============
