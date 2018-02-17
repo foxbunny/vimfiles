@@ -319,11 +319,18 @@ nmap <silent> <leader>` :NERDTreeToggle<CR>
 nmap <silent> <leader>f :NERDTreeFind<CR>
 
 " Graphical undo (gundo)
-nnoremap <silent><leader>u <Esc>:GundoToggle<CR>
+nnoremap <silent> <leader>u <Esc>:GundoToggle<CR>
 
 " Spelling mappings: F8 on / F9 off
-map <silent> <F8> <Esc>:setlocal spell spelllang=en_us<CR>
-map <silent> <F9> <Esc>:setlocal nospell<CR>
+function! ToggleSpell()
+  if (&spell)
+    setlocal nospell
+  else
+    setlocal spell spelllang=en_us
+  endif
+endfunction
+
+map <silent> <F8> <Esc>:call ToggleSpell()<CR>
 
 " Disable highlighting of search terms
 map <silent> <leader>n :nohlsearch<CR>
