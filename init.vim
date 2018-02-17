@@ -338,6 +338,12 @@ map <silent> <leader>n :nohlsearch<CR>
 " Git status
 noremap <silent> <leader>S :Gst<CR>
 
+" Buffers
+noremap <silent> <leader>bb :bnext<CR>
+noremap <silent> <leader>bl :CtrlPBuffer<CR>
+noremap <silent> <leader>bm :bmodified<CR>
+noremap <silent> <leader><Tab> :b#<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FUNKY STUFF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
