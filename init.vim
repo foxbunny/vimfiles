@@ -335,8 +335,8 @@ map <silent> <F8> <Esc>:call ToggleSpell()<CR>
 " Disable highlighting of search terms
 map <silent> <leader>n :nohlsearch<CR>
 
-" Run commit with signoff
-noremap <silent> <leader>S :Gcommit --signoff<CR>
+" Git status
+noremap <silent> <leader>S :Gst<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FUNKY STUFF
