@@ -35,12 +35,15 @@ if exists('*minpac#init')
   "call minpac#add('editorconfig/editorconfig-vim')
   call minpac#add('jonathanfilip/vim-lucius')
 
-  " Usability
+  " Interface enhancements
   call minpac#add('scrooloose/nerdtree')
   call minpac#add('sjl/gundo.vim')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('itchyny/lightline.vim')
   call minpac#add('ctrlpvim/ctrlp.vim')
+  call minpac#add('bling/vim-bufferline')
+
+  " Editing aids
   call minpac#add('scrooloose/syntastic')
   call minpac#add('Townk/vim-autoclose')
   call minpac#add('alvan/vim-closetag')
