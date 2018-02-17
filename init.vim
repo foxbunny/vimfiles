@@ -308,9 +308,15 @@ endfunction
 nmap <silent> <F12> :call ToggleBackground()<CR>
 
 " Tab navigation
-noremap <silent> <leader><Tab> :tabn<CR>
-noremap <silent> <leader><S-Tab> :tabp<CR>
-noremap <silent> <leader>t :tabnew<CR>
+noremap <silent> <leader>tt :tabn<CR>
+noremap <silent> <leader>tp :tabp<CR>
+noremap <silent> <leader>tn :tabnew<CR>
+
+" Buffers
+noremap <silent> <leader>bb :bnext<CR>
+noremap <silent> <leader>bl :CtrlPBuffer<CR>
+noremap <silent> <leader>bm :bmodified<CR>
+noremap <silent> <leader><Tab> :b#<CR>
 
 " CtrlP shortcuts
 noremap <silent> <C-T> :tabnew<CR>:CtrlP<CR>
@@ -340,12 +346,6 @@ map <silent> <leader>n :nohlsearch<CR>
 
 " Git status
 noremap <silent> <leader>S :Gst<CR>
-
-" Buffers
-noremap <silent> <leader>bb :bnext<CR>
-noremap <silent> <leader>bl :CtrlPBuffer<CR>
-noremap <silent> <leader>bm :bmodified<CR>
-noremap <silent> <leader><Tab> :b#<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FUNKY STUFF
