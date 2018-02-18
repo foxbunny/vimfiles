@@ -48,6 +48,9 @@ The configuration covers the following languages and libraries:
 - PureScript
 - Shell scripts
 
+There is no intellisense anywhere, and only basic omnicompletion, since I don't
+use it very much.
+
 Keyboard shortcuts
 ==================
 
