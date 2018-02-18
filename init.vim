@@ -44,10 +44,10 @@ if exists('*minpac#init')
   call minpac#add('bling/vim-bufferline')
 
   " Editing aids
-  call minpac#add('scrooloose/syntastic')
   call minpac#add('Townk/vim-autoclose')
   call minpac#add('alvan/vim-closetag')
   call minpac#add('tpope/vim-surround')
+  call minpac#add('w0rp/ale')
 
   " Python
   call minpac#add('hattya/python-indent.vim')
@@ -60,9 +60,7 @@ if exists('*minpac#init')
   call minpac#add('jason0x43/vim-js-indent')
   call minpac#add('othree/html5.vim')
   call minpac#add('posva/vim-vue')
-  call minpac#add('leafgarland/typescript-vim')
-  call minpac#add('Shougo/vimproc.vim')
-  call minpac#add('Quramy/tsuquyomi')
+  call minpac#add('HerringtonDarkholme/yats.vim')
 
   " Other languages
   call minpac#add('gkz/vim-ls')
@@ -262,18 +260,16 @@ set directory=~/.vim_swap//,$TEMP//,.
 " Save undo history in a file
 set undofile
 
-" Syntastic 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_python_checkers = ["flake8"]
-let g:syntastic_javascript_checkers = ["eslint"]
-let g:syntastic_typescript_checkers = ["tslint", "tsuquyomi"]
-let g:syntastic_vue_checkers = []
-let g:syntastic_rst_checkers = []
-let g:syntastic_cpp_check_header = 1
-hi SyntasticError guifg=red
+" ALE
+let g:ale_linters = {
+      \'javascript': ['eslint'],
+      \'typescript': ['tslint', 'tsserver'],
+      \}
+let g:ale_fixers = {
+      \'javascript': ['eslint'],
+      \'typescript': ['tslint'],
+      \}
+let g:ale_fix_on_save = 1
 
 " JSX is highlighted even without the .jsx extension
 let g:jsx_ext_required = 0

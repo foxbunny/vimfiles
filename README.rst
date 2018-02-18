@@ -27,15 +27,13 @@ The following is included (in alphabetical order):
 - python-syntax (Python syntax highlighting)
 - Sensible (sensible defaults for Vim)
 - Syntastic (metalinter for most languages)
-- TSLint (TypeScript linter support)
-- Tsuquyomi (TypeScript intellisense and code checking)
 - vim-bufferline (Show a list of buffers in the command line)
 - vim-javascript (Better JavaScript highlighting and indentation)
 - vim-jsx (JSX support)
 - vim-mako (Mako template language support)
 - vim-surround (Add/change/remove surrounding quotes, brackets, etc.)
 - vim-vue (VueJS .vue file support)
-- vimproc.vim (Support for subprocesses in some of the plugins)
+- yats.vim (TypeScript syntax highlighting)
 
 The configuration covers the following languages and libraries:
 
@@ -113,13 +111,8 @@ If you forgot the ``--recursive`` flag, you need two more commands::
     git submodule init
     git submodule update
 
-The ``vimproc`` plugin needs to be compiled. Under Linux and Mac systems, you
-can simply run ``make`` in the plugin folder. On Windows, you will need to
-first install `MinGW <http://mingw.org/>`_, and then use the MinGW shell to
-compile the plugin.
-
 Finally, create two directories in your home directory or ``%userprofile%``
-folder:
+folder (not needed for NeoVim):
 
 - ``.vim_undo`` for persistent undo
 - ``.vim_swap`` for storing swap files in a single folder
