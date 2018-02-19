@@ -61,7 +61,7 @@ if exists('*minpac#init')
   call minpac#add('jason0x43/vim-js-indent')
   call minpac#add('othree/html5.vim')
   call minpac#add('posva/vim-vue')
-  call minpac#add('HerringtonDarkholme/yats.vim')
+  call minpac#add('leafgarland/typescript-vim')
 
   " Other languages
   call minpac#add('gkz/vim-ls')
