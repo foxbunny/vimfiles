@@ -22,6 +22,7 @@ The following is included (in alphabetical order):
 - Lucius (color theme)
 - Mako bundle (Mako template support)
 - Minpac (package manager)
+- NERDCommenter (toggle comments on lines, regions, fragments)
 - NERDTree (file browser)
 - python-indent (Python indentation)
 - python-syntax (Python syntax highlighting)

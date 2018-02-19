@@ -48,6 +48,7 @@ if exists('*minpac#init')
   call minpac#add('alvan/vim-closetag')
   call minpac#add('tpope/vim-surround')
   call minpac#add('w0rp/ale')
+  call minpac#add('scrooloose/nerdcommenter')
 
   " Python
   call minpac#add('hattya/python-indent.vim')
@@ -277,6 +278,22 @@ let g:jsx_ext_required = 0
 " Searching is case sensitive only when input includes uppercase letters
 set ignorecase
 set smartcase
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDCommenter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+"
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SHORTCUTS
