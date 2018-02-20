@@ -42,6 +42,7 @@ if exists('*minpac#init')
   call minpac#add('itchyny/lightline.vim')
   call minpac#add('ctrlpvim/ctrlp.vim')
   call minpac#add('bling/vim-bufferline')
+  call minpac#add('airblade/vim-gitgutter')
 
   " Editing aids
   call minpac#add('Townk/vim-autoclose')
@@ -294,6 +295,9 @@ let g:NERDCompactSexyComs = 1
 
 " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
+
+" Set update interval for various UI elements (e.g., git gutter)
+set updatetime=100
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SHORTCUTS

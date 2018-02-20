@@ -29,6 +29,7 @@ The following is included (in alphabetical order):
 - Sensible (sensible defaults for Vim)
 - Syntastic (metalinter for most languages)
 - vim-bufferline (Show a list of buffers in the command line)
+- vim-gitgutter (Show git diff in the gutter)
 - vim-javascript (Better JavaScript highlighting and indentation)
 - vim-jsx (JSX support)
 - vim-mako (Mako template language support)
