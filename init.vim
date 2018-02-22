@@ -32,7 +32,6 @@ if exists('*minpac#init')
 
   " Configuration
   call minpac#add('tpope/vim-sensible')
-  "call minpac#add('editorconfig/editorconfig-vim')
   call minpac#add('jonathanfilip/vim-lucius')
 
   " Interface enhancements
