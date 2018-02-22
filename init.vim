@@ -40,7 +40,6 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('itchyny/lightline.vim')
   call minpac#add('ctrlpvim/ctrlp.vim')
-  call minpac#add('bling/vim-bufferline')
   call minpac#add('airblade/vim-gitgutter')
 
   " Editing aids

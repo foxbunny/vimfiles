@@ -12,10 +12,13 @@ files in sync between machines, I'm putting it up here.
 
 The following is included (in alphabetical order):
 
+- ALE (asynchronous linting)
 - autoclose (automatically close matching parenthesis and brackets)
+- Bufferline (Show a list of buffers in the command line)
 - close-html-tags (automatically close XML/HTML tags)
 - CtrlP (quickly open files with fuzzy matching)
 - Fugitive (the best Git plugin in any editor or IDE, period)
+- GgitGutter (Show git diff in the gutter)
 - Gundo (branching undo)
 - HTML5.vim (HTML 5 support)
 - Lightline (awesome and informative status lines)
@@ -27,15 +30,12 @@ The following is included (in alphabetical order):
 - python-indent (Python indentation)
 - python-syntax (Python syntax highlighting)
 - Sensible (sensible defaults for Vim)
-- Syntastic (metalinter for most languages)
-- vim-bufferline (Show a list of buffers in the command line)
-- vim-gitgutter (Show git diff in the gutter)
+- typescript-vim (TypeScript support)
 - vim-javascript (Better JavaScript highlighting and indentation)
 - vim-jsx (JSX support)
 - vim-mako (Mako template language support)
 - vim-surround (Add/change/remove surrounding quotes, brackets, etc.)
 - vim-vue (VueJS .vue file support)
-- yats.vim (TypeScript syntax highlighting)
 
 The configuration covers the following languages and libraries:
 
