@@ -14,7 +14,6 @@ The following is included (in alphabetical order):
 
 - ALE (asynchronous linting)
 - autoclose (automatically close matching parenthesis and brackets)
-- Bufferline (Show a list of buffers in the command line)
 - close-html-tags (automatically close XML/HTML tags)
 - CtrlP (quickly open files with fuzzy matching)
 - Fugitive (the best Git plugin in any editor or IDE, period)
@@ -22,7 +21,7 @@ The following is included (in alphabetical order):
 - Gundo (branching undo)
 - HTML5.vim (HTML 5 support)
 - Lightline (awesome and informative status lines)
-- Lucius (color theme)
+- Deus (color theme, [see here](http://vimcolors.com/740/deus/dark))
 - Mako bundle (Mako template support)
 - Minpac (package manager)
 - NERDCommenter (toggle comments on lines, regions, fragments)
