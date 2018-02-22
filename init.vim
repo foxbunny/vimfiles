@@ -73,7 +73,7 @@ if exists('*minpac#init')
 endif
 
 " Update installed packages and removed unused ones
-command! Pacsync  packadd minpac | source $MYVIMRC | call minpac#update() | call minpac#clean()
+command! Pacsync  packadd minpac | source $MYVIMRC | call minpac#update() | call minpac#clean() | UpdateRemotePlugins
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
