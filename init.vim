@@ -98,9 +98,6 @@ set number
 " Show matching braces
 set showmatch
 
-" Show what search and replace would do in real time
-set inccommand=split
-
 " Show current line when in insert mode
 autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
@@ -157,6 +154,7 @@ if has("gui_running")
   set guioptions-=r
   set guioptions-=R
   set guioptions-=e
+  set guioptions-=m
 
   " Set GUI fonts
   if has("unix")
@@ -174,6 +172,11 @@ if has("gui_running")
   " Maximize window
   set lines=999 columns=999
   au GUIEnter * simalt ~x
+endif
+
+if has('nvim')
+  " Show what search and replace would do in real time
+  set inccommand=split
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
