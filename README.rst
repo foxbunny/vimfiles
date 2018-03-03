@@ -27,6 +27,7 @@ The following is included (in alphabetical order):
 - NERDCommenter (toggle comments on lines, regions, fragments)
 - NERDTree (file browser)
 - nvim-completion-manager (as-you-type autocompletion)
+- nvim-typescript (TypeScript completion and code navigation)
 - python-indent (Python indentation)
 - python-syntax (Python syntax highlighting)
 - Sensible (sensible defaults for Vim)
