@@ -26,6 +26,7 @@ The following is included (in alphabetical order):
 - Minpac (package manager)
 - NERDCommenter (toggle comments on lines, regions, fragments)
 - NERDTree (file browser)
+- nvim-completion-manager (as-you-type autocompletion)
 - python-indent (Python indentation)
 - python-syntax (Python syntax highlighting)
 - Sensible (sensible defaults for Vim)

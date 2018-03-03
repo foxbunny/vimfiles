@@ -48,6 +48,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-surround')
   call minpac#add('w0rp/ale')
   call minpac#add('scrooloose/nerdcommenter')
+  call minpac#add('roxma/nvim-completion-manager')
 
   " Python
   call minpac#add('hattya/python-indent.vim')
