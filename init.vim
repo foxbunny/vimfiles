@@ -147,6 +147,10 @@ set nowrap
 " When soft wrap is enabled (`set wrap`), let lines wrap at word boundaries
 set linebreak
 
+" Show whitespace characters
+set listchars=eol:⮠,tab:⊢―,space:·,trail:~
+set list
+
 if has("gui_running")
   " Remove toolbar and other annoying bits and pieces
   set guioptions-=T
