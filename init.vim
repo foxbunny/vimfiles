@@ -66,6 +66,7 @@ if exists('*minpac#init')
   " Other languages
   call minpac#add('gkz/vim-ls')
   call minpac#add('purescript-contrib/purescript-vim')
+  call minpac#add('chr4/nginx.vim')
 
   " Package management
   call minpac#add('k-takata/minpac', {'type': 'opt'})
@@ -169,7 +170,7 @@ if has("gui_running")
   endif
 
   " Maximize window
-  set lines=999 columns=999
+  " set lines=999 columns=999
   au GUIEnter * simalt ~x
 endif
 
@@ -250,6 +251,9 @@ au FileType ini setlocal tw=4 sw=4 sts=4 tw=0
 
 " PureScript
 au FileType purs setlocal tw=2 sw=2 sts=2
+
+" Nginx configuration
+au FileType nginx setlocal noet tw=4 sw=4 sts=0 tw=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EDITING OPTIONS
