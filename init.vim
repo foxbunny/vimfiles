@@ -252,9 +252,6 @@ au FileType ini setlocal tw=4 sw=4 sts=4 tw=0
 " PureScript
 au FileType purs setlocal tw=2 sw=2 sts=2
 
-" Nginx configuration
-au FileType nginx setlocal noet tw=4 sw=4 sts=0 tw=0
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EDITING OPTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
