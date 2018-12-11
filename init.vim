@@ -67,6 +67,7 @@ if exists('*minpac#init')
   call minpac#add('gkz/vim-ls')
   call minpac#add('purescript-contrib/purescript-vim')
   call minpac#add('chr4/nginx.vim')
+  call minpac#add('ekalinin/Dockerfile.vim')
 
   " Package management
   call minpac#add('k-takata/minpac', {'type': 'opt'})

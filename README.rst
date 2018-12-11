@@ -16,6 +16,7 @@ The following is included (in alphabetical order):
 - autoclose (automatically close matching parenthesis and brackets)
 - close-html-tags (automatically close XML/HTML tags)
 - CtrlP (quickly open files with fuzzy matching)
+- Dockerfile.vim (support for Dockerfiles)
 - Fugitive (the best Git plugin in any editor or IDE, period)
 - GgitGutter (Show git diff in the gutter)
 - Gundo (branching undo)
