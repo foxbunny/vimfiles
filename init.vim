@@ -48,7 +48,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-surround')
   call minpac#add('w0rp/ale')
   call minpac#add('scrooloose/nerdcommenter')
-  call minpac#add('roxma/nvim-completion-manager')
+  call minpac#add('ncm2/ncm2')
 
   " Python
   call minpac#add('hattya/python-indent.vim')
@@ -61,7 +61,6 @@ if exists('*minpac#init')
   call minpac#add('othree/html5.vim')
   call minpac#add('posva/vim-vue')
   call minpac#add('leafgarland/typescript-vim')
-  call minpac#add('mhartington/nvim-typescript')
 
   " Other languages
   call minpac#add('gkz/vim-ls')
