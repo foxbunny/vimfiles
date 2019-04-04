@@ -170,8 +170,7 @@ if has("gui_running")
   endif
 
   " Maximize window
-  " set lines=999 columns=999
-  au GUIEnter * simalt ~x
+  set lines=999 columns=999
 endif
 
 if has('nvim')
