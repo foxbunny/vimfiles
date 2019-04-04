@@ -158,13 +158,13 @@ if has("gui_running")
 
   " Set GUI fonts
   if has("unix")
-    set guifont="Bitstream Vera Sans Mono 12"
-    set guifontwide="MS Gothic 12"
+    set guifont="Iosevka SS01 12"
+    set guifontwide="Sarasa Term J 12"
     " Increase line spacing +3 px
     set lsp=3
   else
-    set guifont=Bitstream_Vera_Sans_Mono:h12:cANSI
-    set guifontwide=MS_Gothic:h12
+    set guifont=Iosevka_SS01:h12:cANSI
+    set guifontwide=Sarasa_Term_J:h12
     " Increase line spacing +3 px
     set lsp=4
   endif
