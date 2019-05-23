@@ -38,7 +38,9 @@ if exists('*minpac#init')
 
   " Configuration
   call minpac#add('tpope/vim-sensible')
-  call minpac#add('ajmwagar/vim-deus')
+
+  " Color scheme
+  call minpac#add('jonathanfilip/vim-lucius')
 
   " Interface enhancements
   call minpac#add('scrooloose/nerdtree')
@@ -110,7 +112,7 @@ autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
 
 " Color scheme
-silent! colorscheme deus
+silent! colorscheme lucius
 
 " Color scheme style
 set background=light
