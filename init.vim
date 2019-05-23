@@ -14,6 +14,12 @@ filetype plugin indent on
 let mapleader=","
 let g:mapleader=","
 
+" Use vimrc anywhere in the project directories
+set exrc
+
+" Prevent executing insecure commands in the project vimrc
+set secure
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLATFORM-SPECIFIC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -49,6 +55,7 @@ if exists('*minpac#init')
   call minpac#add('w0rp/ale')
   call minpac#add('scrooloose/nerdcommenter')
   call minpac#add('ncm2/ncm2')
+  call minpac#add('mileszs/ack.vim')
 
   " Python
   call minpac#add('hattya/python-indent.vim')
@@ -281,6 +288,14 @@ let g:jsx_ext_required = 0
 " Searching is case sensitive only when input includes uppercase letters
 set ignorecase
 set smartcase
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Search (ack.vim)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDCommenter
