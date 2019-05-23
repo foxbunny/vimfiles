@@ -8,6 +8,11 @@ This configuration bundle is for Vim 8.x and newer.
   This configuration is only compatible with the latest versions of Vim. NeoVim
   is not supported explicitly, although you may get lucky.
 
+Requirements
+============
+
+You will need to install Vim (d'oh!) and `ack <https://beyondgrep.com/>`_.
+
 Installation
 ============
 
