@@ -25,6 +25,12 @@ If you forgot the ``--recursive`` flag, you need two more commands::
     git submodule init
     git submodule update
 
+To allow for smooth updating of Minpac, you may also need to do this::
+
+    cd pack/minpac/opt/minpac
+    git checkout master
+    git pull
+
 Finally, create two directories in your home directory or ``%userprofile%``
 folder (not needed for NeoVim):
 
