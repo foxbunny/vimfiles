@@ -2,110 +2,11 @@
 Foxbunny's vimfiles
 ===================
 
-After a long while, I got around to cleaning up my vim configuration. Removed
-all the stuff I don't need, updated all bundles, etc. Since it sucks to keep
-files in sync between machines, I'm putting it up here.
+This configuration bundle is for Vim 8.x and newer.
 
 .. warning ::
-  This configuration is only compatible with the latest versions of Vim and
-  NeoVim. In particular, it uses Minpac which relies on Vim packages support.
-
-The following is included (in alphabetical order):
-
-- ALE (asynchronous linting)
-- autoclose (automatically close matching parenthesis and brackets)
-- close-html-tags (automatically close XML/HTML tags)
-- CtrlP (quickly open files with fuzzy matching)
-- Dockerfile.vim (support for Dockerfiles)
-- Fugitive (the best Git plugin in any editor or IDE, period)
-- GgitGutter (Show git diff in the gutter)
-- Gundo (branching undo)
-- HTML5.vim (HTML 5 support)
-- Lightline (awesome and informative status lines)
-- Deus (color theme, see `here <http://vimcolors.com/740/deus/dark>`_)
-- Mako bundle (Mako template support)
-- Minpac (package manager)
-- NERDCommenter (toggle comments on lines, regions, fragments)
-- NERDTree (file browser)
-- nginx.vim (Nginx configuration files)
-- nvim-completion-manager (as-you-type autocompletion)
-- nvim-typescript (TypeScript completion and code navigation)
-- python-indent (Python indentation)
-- python-syntax (Python syntax highlighting)
-- Sensible (sensible defaults for Vim)
-- typescript-vim (TypeScript support)
-- vim-javascript (Better JavaScript highlighting and indentation)
-- vim-jsx (JSX support)
-- vim-mako (Mako template language support)
-- vim-surround (Add/change/remove surrounding quotes, brackets, etc.)
-- vim-vue (VueJS .vue file support)
-
-The configuration covers the following languages and libraries:
-
-- Python
-- HTML5/CSS
-- SASS/SCSS
-- Mako templates
-- JavaScript and JSX
-- TypeScript and TSX
-- VueJS
-- CoffeeScript
-- PureScript
-- Shell scripts
-
-There is no intellisense anywhere, and only basic omnicompletion, since I don't
-use it very much.
-
-Keyboard shortcuts
-==================
-
-Leader character is ``,``.
-
-In addition to Vim/NeoVim standard shortcuts, and standard shortcuts provided
-by the plugins, the following shorctuts are also mapped:
-
-==================  ================  =========================================
-Shortcut            Name              Function
-==================  ================  =========================================
-``,`` ``Tab``       last buffer       Go to last buffer (``:b#``)
-``,`` ``S``         git status        Open Git status
-``,`` `````         file list         Toggle NerdTREE
-``,`` ``b`` ``b``   next buffer       Switch to next buffer
-``,`` ``b`` ``l``   list buffers      Start CtrlP in buffer mode
-``,`` ``b`` ``m``   modified buffer   Switch to next modified buffer
-``,`` ``b`` ``u``   unload buffer     Unload the current buffer
-``,`` ``b`` ``q``   quit buffer       Delete (quit) the current buffer
-``,`` ``f``         find current      Open NerdTREE and go to current file
-``,`` ``n``         no highlight      Disable search highlighting
-``,`` ``o``         open with CtrlP   Start CtrlP
-``,`` ``p``         split horiz.      Horizontal split
-``,`` ``q``         quit              Quit
-``,`` ``t`` ``p``   previous tab      Switch to previous tab
-``,`` ``t`` ``t``   next tab          Switch to next tab
-``,`` ``u``         gundo             Toggle Gundo
-``,`` ``v``         split verit.      Vertical split
-``,`` ``w``         write             Save current buffer
-``C-t``             new tab           Create a new tab
-``F8``              spell on/off      Toggle spelling (US English)
-``F12``             color theme       Toggle dark and light theme
-==================  ================  =========================================
-
-Autocommands
-============
-
-Whitespace at the end of the lines is stripped automatically when buffer is
-saved. This is done for the following file types:
-
-- ``*.coffee``
-- ``*.css``
-- ``*.js``
-- ``*.ls``
-- ``*.py``
-- ``*.scss``
-- ``*.tpl``
-- ``*.ts``
-- ``*.tsx``
-- ``*.vue``
+  This configuration is only compatible with the latest versions of Vim. NeoVim
+  is not supported explicitly, although you may get lucky.
 
 Installation
 ============
@@ -129,17 +30,11 @@ Using the configuration
 =======================
 
 The configuration files are located in different locations depending on the
-OS and whether you want to use this with NeoVim or vanilla Vim.
+OS. NeoVim used to be supported, but I no longer use it, so you're on your own.
+Some things may not work as expected.
 
-Windows w/ NeoVim
------------------
-
-Symlink the git folder to ``%userprofile%\AppData\Local\nvim``::
-
-    mklink /J %userprofile%\AppData\Local\nvim \path\to\vimfiles.git
-
-Windows w/ Vim
---------------
+Windows
+-------
 
 Symlink the git folder to `%userprofiles%\vimfiles`::
 
@@ -150,19 +45,8 @@ the file::
         
     exec 'source '.$HOME.'\vimfiles\init.vim'
 
-Linux w/ NeoVim
----------------
-
-Symlink the git folder to ``~/.config/nvim``::
-
-    ln -s /path/to/vimfiles.git ~/.config/nvim
-
-More precisely, it uses ``$XDG_CONFIG_HOME``, which may or may not be
-``~/.config`` for your particular flavor of Linux. If ``~/.config`` does not
-work for you, substitute it for ``$XDG_CONFIG_HOME``.
-
-Linux w/ Vim
-------------
+Linux
+-----
 
 Symlink the git folder to ``~/.vim``::
 
@@ -198,6 +82,124 @@ to pull in a file called ``machine.vim`` in your home directory or
 ``%userprofile%`` folder. This file may contain any of the usual NeoVim/Vim
 configuration scripts and you can use that to customize the configuration
 instead of patching the ``init.vim`` file.
+
+Project-specific configuration
+==============================
+
+Sometimes you may have configuration that applies only to a specific project.
+For example, ``.html`` file may be a Mako template in this project, but an EJS
+template in another, or even differ in different subtrees of your project.
+
+Since project-specific configuration support is enabled, dropping a ``.vimrc``
+file in a directory will apply the contained configuration to the entire tree
+allowing you to add directory-specific configuration without having to edit the
+defualt ``.vimrc``. This can be used for project-wide configuration or even for
+individual components within the project.
+
+Plugins
+=======
+
+The following is included (in alphabetical order):
+
+- ack.vim (fast project-wide searching)
+- ALE (asynchronous linting)
+- autoclose (automatically close matching parenthesis and brackets)
+- close-html-tags (automatically close XML/HTML tags)
+- CtrlP (quickly open files with fuzzy matching)
+- Deus (color theme, see `here <http://vimcolors.com/740/deus/dark>`_)
+- Dockerfile.vim (support for Dockerfiles)
+- Fugitive (the best Git plugin in any editor or IDE, period)
+- GgitGutter (Show git diff in the gutter)
+- Gundo (branching undo)
+- HTML5.vim (HTML 5 support)
+- Lightline (awesome and informative status lines)
+- Mako bundle (Mako template support)
+- Minpac (package manager)
+- NERDCommenter (toggle comments on lines, regions, fragments)
+- NERDTree (file browser)
+- nginx.vim (Nginx configuration files)
+- python-syntax (Python syntax highlighting)
+- python.vim (Python support)
+- Sensible (sensible defaults for Vim)
+- typescript-vim (TypeScript support)
+- vim-javascript (Better JavaScript highlighting and indentation)
+- vim-jsx (JSX support)
+- vim-mako (Mako template language support)
+- vim-surround (Add/change/remove surrounding quotes, brackets, etc.)
+- vim-vue (VueJS .vue file support)
+
+The configuration covers the following languages and libraries:
+
+- Python
+- HTML5/CSS
+- SASS/SCSS
+- Mako templates
+- JavaScript and JSX
+- TypeScript and TSX
+- VueJS
+- CoffeeScript
+- PureScript
+- Shell scripts
+- Nginx configuration files
+- Dockerfiles
+
+There is no intellisense anywhere, and only basic omnicompletion, since I don't
+use it very much.
+
+For project-wide search, use `:Ack`, `:LAck`, etc (see 
+[the docs](https://github.com/mileszs/ack.vim)). It is configured to use 
+[`ag`](https://github.com/ggreer/the_silver_searcher) if it is installed.
+
+Keyboard shortcuts
+==================
+
+Leader character is ``,``.
+
+In addition to Vim/NeoVim standard shortcuts, and standard shortcuts provided
+by the plugins, the following shorctuts are also mapped:
+
+==================  ================  =========================================
+Shortcut            Name              Function
+==================  ================  =========================================
+``,`` ``Tab``       last buffer       Go to last buffer (``:b#``)
+``,`` ``S``         git status        Open Git status
+``,`` `````         file list         Toggle NerdTREE
+``,`` ``b`` ``b``   next buffer       Switch to next buffer
+``,`` ``b`` ``l``   list buffers      Start CtrlP in buffer mode
+``,`` ``b`` ``m``   modified buffer   Switch to next modified buffer
+``,`` ``b`` ``u``   unload buffer     Unload the current buffer
+``,`` ``b`` ``q``   quit buffer       Delete (quit) the current buffer
+``,`` ``f``         find current      Open NerdTREE and go to current file
+``,`` ``n``         no highlight      Disable search highlighting
+``,`` ``o``         open with CtrlP   Start CtrlP
+``,`` ``p``         split horiz.      Horizontal split
+``,`` ``q``         quit              Quit
+``,`` ``t`` ``p``   previous tab      Switch to previous tab
+``,`` ``t`` ``t``   next tab          Switch to next tab
+``,`` ``u``         gundo             Toggle Gundo
+``,`` ``v``         split verit.      Vertical split
+``,`` ``w``         write             Save current buffer
+``C-t``             new tab           Create a new tab
+``F8``              spell on/off      Toggle spelling (US English)
+``F12``             color theme       Toggle dark and light theme (some themes)
+==================  ================  =========================================
+
+Autocommands
+============
+
+Whitespace at the end of the lines is stripped automatically when buffer is
+saved. This is done for the following file types:
+
+- ``*.coffee``
+- ``*.css``
+- ``*.js``
+- ``*.ls``
+- ``*.py``
+- ``*.scss``
+- ``*.tpl``
+- ``*.ts``
+- ``*.tsx``
+- ``*.vue``
 
 Screenshot
 ==========
