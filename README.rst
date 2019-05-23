@@ -11,7 +11,8 @@ This configuration bundle is for Vim 8.x and newer.
 Requirements
 ============
 
-You will need to install Vim (d'oh!) and `ack <https://beyondgrep.com/>`_.
+You will need to install Vim (d'oh!) and `ack <https://beyondgrep.com/>`_ or
+`ag <https://geoff.greer.fm/ag/>`_ (for searching with Ack).
 
 Installation
 ============
