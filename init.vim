@@ -51,7 +51,7 @@ if exists('*minpac#init')
   call minpac#add('airblade/vim-gitgutter')
 
   " Editing aids
-  call minpac#add('Townk/vim-autoclose')
+  call minpac#add('Raimondi/delimitMate')
   call minpac#add('alvan/vim-closetag')
   call minpac#add('tpope/vim-surround')
   call minpac#add('w0rp/ale')
