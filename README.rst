@@ -193,6 +193,7 @@ Shortcut            Name              Function
 ``,`` ``w``         write             Save current buffer
 ``C-t``             new tab           Create a new tab
 ``F8``              spell on/off      Toggle spelling (US English)
+``F11``             syntax toggle     Toggle syntax highlighting (focus mode)
 ``F12``             color theme       Toggle dark and light theme (some themes)
 ==================  ================  =========================================
 

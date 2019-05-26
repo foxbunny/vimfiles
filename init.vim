@@ -4,9 +4,6 @@ set encoding=utf-8
 "Turn off vi compatibility
 set nocompatible
 
-" Enable syntax highlighting
-syntax on
-
 " Enable filetype plugins
 filetype plugin indent on
 
@@ -115,7 +112,7 @@ autocmd InsertEnter * set cursorline
 silent! colorscheme lucius
 
 " Color scheme style
-set background=light
+set background=dark
 
 " Enable status line
 set laststatus=2
@@ -341,7 +338,17 @@ function! ToggleBackground()
   endif
 endfunction
 
+"Toggle syntax highlighting
+function! ToggleSyntax()
+  if exists("g:syntax_on")
+    syntax off
+  else
+    syntax enable
+  endif
+endfunction
+
 nmap <silent> <F12> :call ToggleBackground()<CR>
+nmap <silent> <F11> :call ToggleSyntax()<CR>
 
 " Tab navigation
 noremap <silent> <leader>tt :tabn<CR>
@@ -408,3 +415,10 @@ au BufWritePre *.py,*.tpl,*.css,*.coffee,*.js,*.vue,*.scss,*.ls,*.ts,*.tsx :call
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set wildignore+=*.swp,*.zip,*.exe,*.pyc,node_modules
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Focus mode
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Turn syntax highlighting off completely. Use F11 to turn it back on.
+syntax off
