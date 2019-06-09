@@ -137,6 +137,7 @@ The following is included (in alphabetical order):
 - vim-javascript (Better JavaScript highlighting and indentation)
 - vim-jsx (JSX support)
 - vim-mako (Mako template language support)
+- vim-markdown-toc (Automatic ToC for Markdown documents)
 - vim-surround (Add/change/remove surrounding quotes, brackets, etc.)
 - vim-vue (VueJS .vue file support)
 

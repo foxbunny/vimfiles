@@ -55,6 +55,7 @@ if exists('*minpac#init')
   call minpac#add('scrooloose/nerdcommenter')
   call minpac#add('ncm2/ncm2')
   call minpac#add('mileszs/ack.vim')
+  call minpac#add('mzlogin/vim-markdown-toc')
 
   " Python
   call minpac#add('hattya/python-indent.vim')
@@ -183,6 +184,9 @@ if has('nvim')
   " Show what search and replace would do in real time
   set inccommand=split
 endif
+
+" Allow syntax highlighting of fenced languages
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript=javascript.jsx']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE HANDLING OPTIONS
