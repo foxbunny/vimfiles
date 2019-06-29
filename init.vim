@@ -36,16 +36,13 @@ if exists('*minpac#init')
   " Configuration
   call minpac#add('tpope/vim-sensible')
 
-  " Color scheme
-  call minpac#add('jonathanfilip/vim-lucius')
-
   " Interface enhancements
   call minpac#add('scrooloose/nerdtree')
   call minpac#add('sjl/gundo.vim')
   call minpac#add('tpope/vim-fugitive')
-  call minpac#add('itchyny/lightline.vim')
   call minpac#add('ctrlpvim/ctrlp.vim')
   call minpac#add('airblade/vim-gitgutter')
+  call minpac#add('foxbunny/vim-amber')
 
   " Editing aids
   call minpac#add('Raimondi/delimitMate')
@@ -96,8 +93,8 @@ set mouse=a
 " Show right margin
 set showtabline=2
 
-" Highlight 80 columns
-set colorcolumn=80
+" Highlight background beyond 80 columns
+let &colorcolumn=join(range(80,9000), ",")
 
 " Show line number
 set number
@@ -110,7 +107,7 @@ autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
 
 " Color scheme
-silent! colorscheme lucius
+silent! colorscheme amber
 
 " Color scheme style
 set background=dark
@@ -118,34 +115,17 @@ set background=dark
 " Enable status line
 set laststatus=2
 
-let g:lightline = {
-      \   'colorscheme': 'wombat',
-      \   'active': {
-      \     'left': [ [ 'mode', 'paste' ],
-      \               [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      \   },
-      \   'component': {
-      \     'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-      \     'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \     'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \   },
-      \   'component_visible_condition': {
-      \     'readonly': '(&filetype!="help"&& &readonly)',
-      \     'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \     'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \   },
-      \   'component_function': {
-      \     'filename': 'LightlineFilename'
-      \   },
-      \ }
-
-" Filename function for Lightline (show full path)
-function! LightlineFilename()
-  return expand('%')
-endfunction
-
-" We don't need to show the --INSEERT-- mode because it's part of lightline.
-set noshowmode
+" Custom status line
+set statusline=
+set statusline+=%{FugitiveStatusline()}
+set statusline+=\ %f%m
+set statusline+=%=
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ %{&fileformat} 
+set statusline+=\ %y
+set statusline+=\ 
 
 " Do not cause the long lines to wrap into the next line
 set nowrap
@@ -342,17 +322,7 @@ function! ToggleBackground()
   endif
 endfunction
 
-"Toggle syntax highlighting
-function! ToggleSyntax()
-  if exists("g:syntax_on")
-    syntax off
-  else
-    syntax enable
-  endif
-endfunction
-
 nmap <silent> <F12> :call ToggleBackground()<CR>
-nmap <silent> <F11> :call ToggleSyntax()<CR>
 
 " Tab navigation
 noremap <silent> <leader>tt :tabn<CR>

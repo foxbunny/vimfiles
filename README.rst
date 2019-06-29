@@ -115,6 +115,7 @@ The following is included (in alphabetical order):
 
 - ack.vim (fast project-wide searching)
 - ALE (asynchronous linting)
+- Amber color scheme (supports toggling dark and light)
 - close-html-tags (automatically close XML/HTML tags)
 - CtrlP (quickly open files with fuzzy matching)
 - delimitMate (automatically close matching parenthesis and brackets)
@@ -123,8 +124,6 @@ The following is included (in alphabetical order):
 - GgitGutter (Show git diff in the gutter)
 - Gundo (branching undo)
 - HTML5.vim (HTML 5 support)
-- Lightline (awesome and informative status lines)
-- Lucius color scheme (supports toggling dark and light)
 - Mako bundle (Mako template support)
 - Minpac (package manager)
 - NERDCommenter (toggle comments on lines, regions, fragments)
@@ -194,7 +193,6 @@ Shortcut            Name              Function
 ``,`` ``w``         write             Save current buffer
 ``C-t``             new tab           Create a new tab
 ``F8``              spell on/off      Toggle spelling (US English)
-``F11``             syntax toggle     Toggle syntax highlighting (focus mode)
 ``F12``             color theme       Toggle dark and light theme (some themes)
 ==================  ================  =========================================
 
