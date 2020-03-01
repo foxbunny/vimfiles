@@ -183,7 +183,7 @@ set encoding=utf-8
 
 " Yank to system clipboard
 " (see http://vim.wikia.com/wiki/Accessing_the_system_clipboard)
-if has("unix")
+if has("unix") && !has("gui_macvim")
   set clipboard=unnamedplus
 else
   set clipboard=unnamed
