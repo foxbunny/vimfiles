@@ -71,6 +71,7 @@ if exists('*minpac#init')
   call minpac#add('purescript-contrib/purescript-vim')
   call minpac#add('chr4/nginx.vim')
   call minpac#add('ekalinin/Dockerfile.vim')
+  call minpac#add('fatih/vim-go')
 
   " Package management
   call minpac#add('k-takata/minpac', {'type': 'opt'})
@@ -145,8 +146,8 @@ if has("gui_running")
 
   " Set GUI font
   if has("unix")
-    set guifont=Iosevka\ SS01\ Medium\ 12
-    set guifontwide=Sarasa\ Term\ J\ 12
+    set guifont=Iosevka\ Term\ SS01\ Light:h14
+    set guifontwide=Sarasa\ Term\ J:h14
     " Increase line spacing +3 px
     set lsp=3
   else
