@@ -146,8 +146,8 @@ if has("gui_running")
 
   " Set GUI font
   if has("unix")
-    set guifont=Iosevka\ Term\ SS01\ Light:h14
-    set guifontwide=Sarasa\ Term\ J:h14
+    set guifont=Iosevka\ SS01\ Light\ 14
+    set guifontwide=Sarasa\ Term\ J\ 14
     " Increase line spacing +3 px
     set lsp=3
   else
