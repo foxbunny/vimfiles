@@ -45,7 +45,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('ctrlpvim/ctrlp.vim')
   call minpac#add('airblade/vim-gitgutter')
-  call minpac#add('foxbunny/vim-amber')
+  call minpac#add('jonathanfilip/vim-lucius')
 
   " Editing aids
   call minpac#add('Raimondi/delimitMate')
@@ -111,7 +111,7 @@ autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
 
 " Color scheme
-silent! colorscheme amber
+silent! colorscheme lucius
 
 " Color scheme style
 set background=dark
