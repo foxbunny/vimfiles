@@ -17,6 +17,9 @@ set exrc
 " Prevent executing insecure commands in the project vimrc
 set secure
 
+" Ensure vim is always modal
+set noinsertmode
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLATFORM-SPECIFIC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
