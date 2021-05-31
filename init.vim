@@ -56,6 +56,8 @@ if exists('*minpac#init')
   call minpac#add('ncm2/ncm2')
   call minpac#add('mileszs/ack.vim')
   call minpac#add('mzlogin/vim-markdown-toc')
+  call minpac#add('godlygeek/tabular')
+  call minpac#add('frazrepo/vim-rainbow')
 
   " Python
   call minpac#add('hattya/python-indent.vim')
@@ -68,6 +70,7 @@ if exists('*minpac#init')
   call minpac#add('othree/html5.vim')
   call minpac#add('posva/vim-vue')
   call minpac#add('leafgarland/typescript-vim')
+  call minpac#add('prettier/vim-prettier', { 'do': 'silent! !yarn install' })
 
   " Other languages
   call minpac#add('gkz/vim-ls')
@@ -75,6 +78,7 @@ if exists('*minpac#init')
   call minpac#add('chr4/nginx.vim')
   call minpac#add('ekalinin/Dockerfile.vim')
   call minpac#add('fatih/vim-go')
+  call minpac#add('plasticboy/vim-markdown')
 
   " Package management
   call minpac#add('k-takata/minpac', {'type': 'opt'})
@@ -245,6 +249,13 @@ au FileType ini setlocal tw=4 sw=4 sts=4 tw=0
 " PureScript
 au FileType purs setlocal tw=2 sw=2 sts=2
 
+" Dockerfile
+aut FileType Dockerfile setlocal tw=0
+
+" Prettier (JavaScript) autoformat if config is found
+let g:prettier#autoformat_config_present = 1
+let g:prettier#autoformat_require_pragma = 0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EDITING OPTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -275,6 +286,14 @@ let g:jsx_ext_required = 0
 " Searching is case sensitive only when input includes uppercase letters
 set ignorecase
 set smartcase
+
+" Markdown tweaks
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_new_list_item_indent = 2
+
+" Enable rainbow brackets
+let g:rainbow_active = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search (ack.vim)
