@@ -71,6 +71,7 @@ if exists('*minpac#init')
   call minpac#add('posva/vim-vue')
   call minpac#add('leafgarland/typescript-vim')
   call minpac#add('prettier/vim-prettier', { 'do': 'silent! !yarn install' })
+  call minpac#add('Galooshi/vim-import-js', { 'do': 'silent! yarn global add import-js'})
 
   " Other languages
   call minpac#add('gkz/vim-ls')
@@ -225,14 +226,20 @@ set textwidth=79
 
 " Overrides for different filetypes
 
+" JavaScript
+au FileType js setlocal textwidth=120
+au FileType js setlocal &colorcolumn=join(range(120,9000), ",")
+
 " HTML
 au FileType html setlocal tw=0
+au FileType html setlocal &colorcolumn=join(range(120,9000), ",")
 
 " Mako template
 au FileType mako setlocal tw=0 sw=4 ts=4 sts=4
+au FileType mako setlocal &colorcolumn=join(range(120,9000), ",")
 
 " Mako template
-au FileType python setlocal tw=0 sw=4 ts=4 sts=4
+au FileType python setlocal sw=4 ts=4 sts=4
 
 " reStructured text
 au FileType rst setlocal sw=4 ts=4 sts=4
@@ -241,16 +248,17 @@ au FileType rst setlocal sw=4 ts=4 sts=4
 au FileType vue setlocal tw=0
 
 " Make
-au FileType make setlocal noet tw=4 sw=4 sts=0 tw=0
+au FileType make setlocal noet sw=4 sts=0 tw=0
 
 " dosini
-au FileType ini setlocal tw=4 sw=4 sts=4 tw=0
+au FileType ini setlocal ts=4 sw=4 sts=4 tw=0
 
 " PureScript
-au FileType purs setlocal tw=2 sw=2 sts=2
+au FileType purs setlocal sw=2 sts=2
 
 " Dockerfile
-aut FileType Dockerfile setlocal tw=0
+au FileType Dockerfile setlocal tw=0
+au FileType mako setlocal &colorcolumn=join(range(120,9000), ",")
 
 " Prettier (JavaScript) autoformat if config is found
 let g:prettier#autoformat_config_present = 1
