@@ -27,8 +27,8 @@ Vim. NeoVim is not supported explicitly, although you may get lucky.
 
 ## Requirements
 
-You will need to install Vim (d'oh!) and `ack <https://beyondgrep.com/>`_ or
-`ag <https://geoff.greer.fm/ag/>`_ (for searching with Ack).
+You will need to install Vim (d'oh!) and [ack](https://beyondgrep.com/) or
+[ag](https://geoff.greer.fm/ag/) (for searching with Ack).
 
 ## Installation
 
@@ -74,7 +74,7 @@ mklink /J %userprofile%\vimfiles
 
 Next, create the `.vimrc` file at `%userprofile%\_vimrc` and put this into
 the file:
-      
+
 ```shell
 exec 'source '.$HOME.'\vimfiles\init.vim'
 ```
