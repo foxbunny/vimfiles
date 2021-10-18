@@ -213,6 +213,12 @@ saved. This is done for the following file types:
 - ``*.tsx``
 - ``*.vue``
 
+Autosave
+========
+
+Files are automatically saved when we exit insert mode with ``<Esc>`` or when
+Vim loses focus (this only works in GUI mode).
+
 Screenshot
 ==========
 
