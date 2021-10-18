@@ -197,12 +197,12 @@ Shortcut | Name | Function
 ---|---|---
 `,` `Tab` | last buffer | Go to last buffer (`:b#`)
 `,` `S` | git status | Open Git status
-`,` `&grave;` | file list | Toggle NerdTREE
+`,` <code>`</code> | file list | Toggle NerdTREE
 `,` `b` `b` | next buffer | Switch to next buffer
-`,` `b` `l` | list buffers      Start CtrlP in buffer mode
-`,` `b` `m` | modified buffer   Switch to next modified buffer
-`,` `b` `u` | unload buffer     Unload the current buffer
-`,` `b` `q` | quit buffer       Delete (quit) the current buffer
+`,` `b` `l` | list buffers | Start CtrlP in buffer mode
+`,` `b` `m` | modified buffer | Switch to next modified buffer
+`,` `b` `u` | unload buffer | Unload the current buffer
+`,` `b` `q` | quit buffer | Delete (quit) the current buffer
 `,` `f` | find current | Open NerdTREE and go to current file
 `,` `n` | no highlight | Disable search highlighting
 `,` `o` | open with CtrlP | Start CtrlP
