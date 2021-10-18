@@ -167,6 +167,9 @@ if has("gui_running")
 
   " Maximize window
   set lines=999 columns=999
+
+  " Auto-save files when focus is lost
+  au FocusLost * :wa
 endif
 
 if has('nvim')
@@ -176,6 +179,9 @@ endif
 
 " Allow syntax highlighting of fenced languages
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript=javascript.jsx']
+
+" Auto-save current file when exiting insert mode
+inoremap <Esc> <Esc>:w<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE HANDLING OPTIONS
