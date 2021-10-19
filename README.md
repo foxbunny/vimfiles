@@ -3,7 +3,8 @@
 This configuration bundle is for Vim 8.x and newer.
 
 **WARNING:** This configuration is only compatible with the latest versions of
-Vim. NeoVim is not supported explicitly, although you may get lucky.
+Vim. NeoVim is not supported explicitly, although you may get lucky. Also, this 
+configuration assumes vimdir is `~/.vim` (not the case on Windows).
 
 
 <!-- vim-markdown-toc GFM -->
@@ -11,8 +12,6 @@ Vim. NeoVim is not supported explicitly, although you may get lucky.
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Using the configuration](#using-the-configuration)
-* [Windows](#windows)
-* [Linux](#linux)
 * [Initializing the plugins](#initializing-the-plugins)
 * [Machine-specific configuration](#machine-specific-configuration)
 * [Project-specific configuration](#project-specific-configuration)
@@ -29,6 +28,10 @@ Vim. NeoVim is not supported explicitly, although you may get lucky.
 
 You will need to install Vim (d'oh!) and [ack](https://beyondgrep.com/) or
 [ag](https://geoff.greer.fm/ag/) (for searching with Ack).
+
+Packages are managed by [vim-plug](https://github.com/junegunn/vim-plug).
+Because vimrc includes an automatic install script, you need to have curl
+installed on your system. 
 
 ## Installation
 
@@ -60,26 +63,8 @@ folder (not needed for NeoVim):
 
 ## Using the configuration
 
-The configuration files are located in different locations depending on the
-OS. NeoVim used to be supported, but I no longer use it, so you're on your own.
+NeoVim used to be supported, but I no longer use it, so you're on your own.
 Some things may not work as expected.
-
-## Windows
-
-Symlink the git folder to `%userprofiles%\vimfiles`:
-
-```shell
-mklink /J %userprofile%\vimfiles
-```
-
-Next, create the `.vimrc` file at `%userprofile%\_vimrc` and put this into
-the file:
-
-```shell
-exec 'source '.$HOME.'\vimfiles\init.vim'
-```
-
-## Linux
 
 Symlink the git folder to `~/.vim`:
 
@@ -95,20 +80,9 @@ ln -s /path/to/vimfiles.git/init.vim ~/.vimrc
 
 ## Initializing the plugins
 
-The first time you start Vim or NeoVim with this configuration, you will notice
-that many of the promised goodies don't work. This is because the plugins are
-not part of the repository, but are, instead, managed by Minpac. The first time
-you run your editor, use the following command:
-
-```
-:Pacsync
-```
-
-This will download the necessary plugins from GitHub and install them under
-`pack/minpac/start`. 
-
-This command is also used when you update the `init.vim` file to add or
-remove packages.
+The first time you start Vim or NeoVim with this configuration, vim-plug will
+automatically install itself and any missing plugins. You generally shouldn't
+need to do anything.
 
 ## Machine-specific configuration
 
@@ -136,7 +110,7 @@ individual components within the project.
 
 The following is included (in alphabetical order):
 
-- ack.vim (fast project-wide searching)
+- ack.vim (fast project-wide searching
 - ALE (asynchronous linting)
 - Amber color scheme (supports toggling dark and light)
 - close-html-tags (automatically close XML/HTML tags)
@@ -145,10 +119,8 @@ The following is included (in alphabetical order):
 - Dockerfile.vim (support for Dockerfiles)
 - Fugitive (the best Git plugin in any editor or IDE, period)
 - GgitGutter (Show git diff in the gutter)
-- Gundo (branching undo)
 - HTML5.vim (HTML 5 support)
 - Mako bundle (Mako template support)
-- Minpac (package manager)
 - NERDCommenter (toggle comments on lines, regions, fragments)
 - NERDTree (file browser)
 - nginx.vim (Nginx configuration files)
@@ -160,6 +132,7 @@ The following is included (in alphabetical order):
 - vim-jsx (JSX support)
 - vim-mako (Mako template language support)
 - vim-markdown-toc (Automatic ToC for Markdown documents)
+- vim-plug (package manager)
 - vim-surround (Add/change/remove surrounding quotes, brackets, etc.)
 - vim-vue (VueJS .vue file support)
 
@@ -210,7 +183,6 @@ Shortcut | Name | Function
 `,` `q` | quit | Quit
 `,` `t` `p` | previous tab| Switch to previous tab
 `,` `t` `t` | next tab | Switch to next tab
-`,` `u` | gundo | Toggle Gundo
 `,` `v` | split vert. | Vertical split
 `,` `w` | write | Save current buffer
 `C-t` | new tab | Create a new tab

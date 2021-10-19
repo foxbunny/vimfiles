@@ -33,61 +33,65 @@ endtry
 " PLUGINS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if exists('*minpac#init')
-  call minpac#init()
-
-  " Configuration
-  call minpac#add('tpope/vim-sensible')
-
-  " Interface enhancements
-  call minpac#add('scrooloose/nerdtree')
-  call minpac#add('sjl/gundo.vim')
-  call minpac#add('tpope/vim-fugitive')
-  call minpac#add('ctrlpvim/ctrlp.vim')
-  call minpac#add('airblade/vim-gitgutter')
-  call minpac#add('jonathanfilip/vim-lucius')
-
-  " Editing aids
-  call minpac#add('Raimondi/delimitMate')
-  call minpac#add('alvan/vim-closetag')
-  call minpac#add('tpope/vim-surround')
-  call minpac#add('w0rp/ale')
-  call minpac#add('scrooloose/nerdcommenter')
-  call minpac#add('ncm2/ncm2')
-  call minpac#add('mileszs/ack.vim')
-  call minpac#add('mzlogin/vim-markdown-toc')
-  call minpac#add('godlygeek/tabular')
-  call minpac#add('frazrepo/vim-rainbow')
-
-  " Python
-  call minpac#add('hattya/python-indent.vim')
-  call minpac#add('hdima/python-syntax')
-  call minpac#add('sophacles/vim-bundle-mako')
-
-  " JavaScript/TypeScript
-  call minpac#add('mxw/vim-jsx')
-  call minpac#add('pangloss/vim-javascript')
-  call minpac#add('othree/html5.vim')
-  call minpac#add('posva/vim-vue')
-  call minpac#add('leafgarland/typescript-vim')
-  call minpac#add('prettier/vim-prettier', { 'do': 'silent! !yarn install' })
-  call minpac#add('Galooshi/vim-import-js', { 'do': 'silent! yarn global add import-js'})
-
-  " Other languages
-  call minpac#add('gkz/vim-ls')
-  call minpac#add('purescript-contrib/purescript-vim')
-  call minpac#add('chr4/nginx.vim')
-  call minpac#add('ekalinin/Dockerfile.vim')
-  call minpac#add('fatih/vim-go')
-  call minpac#add('plasticboy/vim-markdown')
-
-  " Package management
-  call minpac#add('k-takata/minpac', {'type': 'opt'})
+" Install vim-plug if missing
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Update installed packages and removed unused ones
-command! Pacsync  packadd minpac | source $MYVIMRC | call minpac#update() | call minpac#clean() | UpdateRemotePlugins
+call plug#begin(data_dir . '/plugged')
 
+" Configuration
+Plug 'tpope/vim-sensible'
+
+" Interface enhancements
+Plug 'scrooloose/nerdtree', { 'on': 'NerdTreeToggle' }
+Plug 'tpope/vim-fugitive'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'jonathanfilip/vim-lucius'
+
+" Editing aids
+Plug 'Raimondi/delimitMate'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ncm2/ncm2'
+Plug 'mileszs/ack.vim', { 'on': 'Ack' }
+Plug 'godlygeek/tabular'
+Plug 'frazrepo/vim-rainbow'
+
+" Python
+Plug 'hattya/python-indent.vim', { 'for': 'python' }
+Plug 'hdima/python-syntax', { 'for': 'python' }
+Plug 'sophacles/vim-bundle-mako', { 'for': 'python' }
+
+" JavaScript/TypeScript
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'typescript'] }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript'] }
+Plug 'posva/vim-vue', { 'for': 'vue' }
+Plug 'leafgarland/typescript-vim', {'for': 'typescript' }
+Plug 'prettier/vim-prettier', { 
+      \ 'do': 'yarn install', 
+      \ 'branch': 'release/0.x', 
+      \ 'for': ['typescript', 'javascript', 'css', 'scss', 'json', 'vue'] }
+Plug 'Galooshi/vim-import-js', { 'for': ['javascript', 'typescript'], 'do': 'yarn global add import-js'}
+
+" Markdown
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
+
+" Other languages
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'gkz/vim-ls', { 'for': 'livescript' }
+Plug 'purescript-contrib/purescript-vim', { 'for': 'pures' }
+Plug 'chr4/nginx.vim', { 'for': 'nginx' }
+Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UI OPTIONS
@@ -381,9 +385,6 @@ noremap <silent> <leader>bl :CtrlPBuffer<CR>
 "Map NERDTree
 nmap <silent> <leader>` :NERDTreeToggle<CR>  
 nmap <silent> <leader>f :NERDTreeFind<CR>
-
-" Graphical undo (gundo)
-nnoremap <silent> <leader>u <Esc>:GundoToggle<CR>
 
 " Spelling mappings: F8 on / F9 off
 function! ToggleSpell()
