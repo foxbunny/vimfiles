@@ -46,7 +46,7 @@ call plug#begin(data_dir . '/plugged')
 Plug 'tpope/vim-sensible'
 
 " Interface enhancements
-Plug 'scrooloose/nerdtree', { 'on': 'NerdTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
