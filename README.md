@@ -26,6 +26,13 @@ configuration assumes vimdir is `~/.vim` (not the case on Windows).
 
 ## Requirements
 
+TL;DR
+
+- Vim
+- ag (the silver searcher)
+- NodeJS
+- TypeScript
+
 You will need to install Vim (d'oh!) and [ack](https://beyondgrep.com/) or
 [ag](https://geoff.greer.fm/ag/) (for searching with Ack).
 
