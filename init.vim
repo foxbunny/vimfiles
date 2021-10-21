@@ -352,7 +352,8 @@ noremap <silent> <leader>w :up<CR>
 
 " Splitting
 noremap <silent> <leader>v :vsplit<CR>
-noremap <silent> <leader>p :split<CR>
+noremap <silent> <leader>- :split<CR>
+noremap <silent> <leader>0 :only<CR>
 
 " Toggle background
 function! ToggleBackground()
@@ -368,8 +369,8 @@ nmap <silent> <F12> :call ToggleBackground()<CR>
 " Tab navigation
 noremap <silent> <leader>tt :tabn<CR>
 noremap <silent> <leader>tp :tabp<CR>
-noremap <silent> <C-T> :tabnew<CR>
-inoremap <silent> <C-T> <Esc>:tabnew<CR>
+noremap <silent> <C-t> :tabnew<CR>
+inoremap <silent> <C-t> <Esc>:tabnew<CR>
 
 " Buffers
 noremap <silent> <leader>bb :bnext<CR>
@@ -401,7 +402,9 @@ map <silent> <F8> <Esc>:call ToggleSpell()<CR>
 map <silent> <leader>n :nohlsearch<CR>
 
 " Git status
-noremap <silent> <leader>S :Gst<CR>
+noremap <silent> <leader>s :Git<CR>
+noremap <silent> <leader>p :Git push<CR>
+noremap <silent> <leader>P :Git push --force<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FUNKY STUFF

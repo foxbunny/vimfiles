@@ -168,24 +168,27 @@ by the plugins, the following shorctuts are also mapped:
 
 Shortcut | Name | Function
 ---|---|---
+`,` `w` | write | Save current buffer
+`,` `q` | quit | Quit
 `,` `Tab` | last buffer | Go to last buffer (`:b#`)
-`,` `S` | git status | Open Git status
-`,` <code>`</code> | file list | Toggle NerdTREE
 `,` `b` `b` | next buffer | Switch to next buffer
 `,` `b` `l` | list buffers | Start CtrlP in buffer mode
 `,` `b` `m` | modified buffer | Switch to next modified buffer
 `,` `b` `u` | unload buffer | Unload the current buffer
 `,` `b` `q` | quit buffer | Delete (quit) the current buffer
-`,` `f` | find current | Open NerdTREE and go to current file
-`,` `n` | no highlight | Disable search highlighting
-`,` `o` | open with CtrlP | Start CtrlP
-`,` `p` | split horiz. | Horizontal split
-`,` `q` | quit | Quit
 `,` `t` `p` | previous tab| Switch to previous tab
 `,` `t` `t` | next tab | Switch to next tab
+`,` `o` | open with CtrlP | Start CtrlP
+`,` <code>`</code> | file list | Toggle NerdTREE
+`,` `f` | find current | Open NerdTREE and go to current file
+`,` `n` | no highlight | Disable search highlighting
 `,` `v` | split vert. | Vertical split
-`,` `w` | write | Save current buffer
-`C-t` | new tab | Create a new tab
+`,` `-` | split horiz. | Horizontal split
+`,` `0` | only | Make current split the only buffer (remove all splits)
+`,` `s` | git status | Open Git status (Fugitive)
+`,` `p` | git push | Push code (`git push`)
+`,` `P` | git force push | Force-push code (`git push --force`)
+`Ctrl+t` | new tab | Create a new tab
 `F8` | spell on/off | Toggle spelling (US English)
 `F12` | color theme | Toggle dark and light theme (some themes)
 
