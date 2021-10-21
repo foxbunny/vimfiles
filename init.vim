@@ -77,7 +77,6 @@ Plug 'prettier/vim-prettier', {
       \ 'do': 'yarn install', 
       \ 'branch': 'release/0.x', 
       \ 'for': ['typescript', 'javascript', 'css', 'scss', 'json', 'vue'] }
-Plug 'Galooshi/vim-import-js', { 'for': ['javascript', 'typescript'], 'do': 'yarn global add import-js'}
 
 " Markdown
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
