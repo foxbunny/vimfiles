@@ -33,6 +33,10 @@ Packages are managed by [vim-plug](https://github.com/junegunn/vim-plug).
 Because vimrc includes an automatic install script, you need to have curl
 installed on your system. 
 
+Install NodeJS (if you are using NVM, make sure that it is in the `$PATH` for
+Vim!) when you launch it. Install `typescript` globally if you want support for
+it.
+
 ## Installation
 
 To install, just clone the project to a local directory:
