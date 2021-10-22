@@ -56,12 +56,11 @@ Plug 'jonathanfilip/vim-lucius'
 Plug 'Raimondi/delimitMate'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdcommenter'
-Plug 'ncm2/ncm2'
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'godlygeek/tabular'
-Plug 'frazrepo/vim-rainbow'
+Plug 'frazrepo/vim-rainbow', { 'for': ['javascript', 'typescript', 'go', 'python', 'html']}
 
 " Python
 Plug 'hattya/python-indent.vim', { 'for': 'python' }
@@ -71,7 +70,6 @@ Plug 'sophacles/vim-bundle-mako', { 'for': 'python' }
 " JavaScript/TypeScript
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'typescript'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript'] }
-Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'leafgarland/typescript-vim', {'for': 'typescript' }
 Plug 'prettier/vim-prettier', { 
       \ 'do': 'yarn install', 
@@ -84,8 +82,6 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
 
 " Other languages
 Plug 'othree/html5.vim', { 'for': 'html' }
-Plug 'gkz/vim-ls', { 'for': 'livescript' }
-Plug 'purescript-contrib/purescript-vim', { 'for': 'pures' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'fatih/vim-go', { 'for': 'go' }
@@ -185,6 +181,10 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript=java
 
 " Auto-save current file when exiting insert mode
 inoremap <Esc> <Esc>:w<CR>
+
+" Code folding options
+set foldmethod=syntax
+set foldlevelstart=99
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE HANDLING OPTIONS
