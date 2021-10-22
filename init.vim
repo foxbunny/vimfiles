@@ -21,15 +21,6 @@ set secure
 set noinsertmode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PLATFORM-SPECIFIC
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-try
-  exec 'source '.$HOME.'/machine.vim'
-catch
-endtry
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -61,6 +52,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'godlygeek/tabular'
 Plug 'frazrepo/vim-rainbow', { 'for': ['javascript', 'typescript', 'go', 'python', 'html']}
+
+" Project support
+Plug 'amiorin/vim-project'
 
 " Python
 Plug 'hattya/python-indent.vim', { 'for': 'python' }
@@ -436,3 +430,13 @@ set wildignore+=*.swp,*.zip,*.exe,*.pyc,node_modules
 
 " Turn syntax highlighting off completely. Use F11 to turn it back on.
 syntax off
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PLATFORM-SPECIFIC
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+try
+  exec 'source '.$HOME.'/machine.vim'
+catch
+endtry
+
