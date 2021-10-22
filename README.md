@@ -9,13 +9,13 @@ configuration assumes vimdir is `~/.vim` (not the case on Windows).
 
 <!-- vim-markdown-toc GFM -->
 
+* [Features](#features)
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Using the configuration](#using-the-configuration)
 * [Initializing the plugins](#initializing-the-plugins)
 * [Machine-specific configuration](#machine-specific-configuration)
 * [Project-specific configuration](#project-specific-configuration)
-* [Plugins](#plugins)
 * [Keyboard shortcuts](#keyboard-shortcuts)
 * [Autocommands](#autocommands)
 * [Autosave](#autosave)
@@ -23,6 +23,43 @@ configuration assumes vimdir is `~/.vim` (not the case on Windows).
 * [License](#license)
 
 <!-- vim-markdown-toc -->
+
+## Features
+
+The plugin set provides full support for the following languages:
+
+- Dockerfiles
+- Go
+- HTML5/CSS
+- JavaScript and JSX
+- Mako templates
+- Markdown
+- Nginx configuration files
+- Python
+- Shell scripts
+- TypeScript and TSX
+
+Following editor features are provided:
+
+- Full git integration
+- Fuzzy search for opening files
+- Folder tree view
+- Linter integration for supported languages
+- Spelling
+- Toggling light/dark theme
+- Auto-close tags
+- Text and regexp search of all code in the project
+- Automatic vertical text alignment
+- Autocompletion in Vim command line
+- Autosave on focus loss or `<Esc>`
+
+There is no intellisense anywhere, and only basic omnicompletion, since I don't
+use it very much. Same goes for refactoring tools.
+
+For project-wide search, use `:Ack`, `:LAck`, etc (see 
+[the docs](https://github.com/mileszs/ack.vim)). It is configured to use 
+[`ag`](https://github.com/ggreer/the_silver_searcher) if it is installed
+(recommended).
 
 ## Requirements
 
@@ -32,6 +69,7 @@ TL;DR
 - ag (the silver searcher)
 - NodeJS
 - TypeScript
+- Iosevka font and Sarasa Gothic font
 
 You will need to install Vim (d'oh!) and [ack](https://beyondgrep.com/) or
 [ag](https://geoff.greer.fm/ag/) (for searching with Ack).
@@ -44,26 +82,16 @@ Install NodeJS (if you are using NVM, make sure that it is in the `$PATH` for
 Vim!) when you launch it. Install `typescript` globally if you want support for
 it.
 
+Install the [Iosevka](https://github.com/be5invis/Iosevka/releases) (SS01 
+variant) and [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic/releases) 
+(Sarasa Term J) fonts.
+
 ## Installation
 
 To install, just clone the project to a local directory:
 
 ```shell
-git clone --recursive https://github.com/foxbunny/vimfiles.git
-```
-
-If you forgot the `--recursive` flag, you need two more commands:
-
-```
-git submodule update --init
-```
-
-To allow for smooth updating of Minpac, you may also need to do this:
-
-```
-cd pack/minpac/opt/minpac
-git checkout master
-git pull
+git clone https://github.com/foxbunny/vimfiles.git
 ```
 
 Finally, create two directories in your home directory or `%userprofile%`
@@ -71,6 +99,9 @@ folder (not needed for NeoVim):
 
 - `.vim_undo` for persistent undo
 - `.vim_swap` for storing swap files in a single folder
+
+When starting for the first time, run `:PlugInstall` to install all the
+plugins, then restart.
 
 ## Using the configuration
 
@@ -114,67 +145,15 @@ template in another, or even differ in different subtrees of your project.
 Since project-specific configuration support is enabled, dropping a `.vimrc`
 file in a directory will apply the contained configuration to the entire tree
 allowing you to add directory-specific configuration without having to edit the
-defualt `.vimrc`. This can be used for project-wide configuration or even for
+default `.vimrc`. This can be used for project-wide configuration or even for
 individual components within the project.
-
-## Plugins
-
-The following is included (in alphabetical order):
-
-- ack.vim (fast project-wide searching
-- ALE (asynchronous linting)
-- Amber color scheme (supports toggling dark and light)
-- close-html-tags (automatically close XML/HTML tags)
-- CtrlP (quickly open files with fuzzy matching)
-- delimitMate (automatically close matching parenthesis and brackets)
-- Dockerfile.vim (support for Dockerfiles)
-- Fugitive (the best Git plugin in any editor or IDE, period)
-- GgitGutter (Show git diff in the gutter)
-- HTML5.vim (HTML 5 support)
-- Mako bundle (Mako template support)
-- NERDCommenter (toggle comments on lines, regions, fragments)
-- NERDTree (file browser)
-- nginx.vim (Nginx configuration files)
-- python-syntax (Python syntax highlighting)
-- python.vim (Python support)
-- Sensible (sensible defaults for Vim)
-- typescript-vim (TypeScript support)
-- vim-javascript (Better JavaScript highlighting and indentation)
-- vim-jsx (JSX support)
-- vim-mako (Mako template language support)
-- vim-markdown-toc (Automatic ToC for Markdown documents)
-- vim-plug (package manager)
-- vim-surround (Add/change/remove surrounding quotes, brackets, etc.)
-- vim-vue (VueJS .vue file support)
-
-The configuration covers the following languages and libraries:
-
-- Python
-- HTML5/CSS
-- SASS/SCSS
-- Mako templates
-- JavaScript and JSX
-- TypeScript and TSX
-- VueJS
-- CoffeeScript
-- PureScript
-- Shell scripts
-- Nginx configuration files
-- Dockerfiles
-
-There is no intellisense anywhere, and only basic omnicompletion, since I don't
-use it very much.
-
-For project-wide search, use `:Ack`, `:LAck`, etc (see 
-[the docs](https://github.com/mileszs/ack.vim)). It is configured to use 
-[`ag`](https://github.com/ggreer/the_silver_searcher) if it is installed.
 
 ## Keyboard shortcuts
 
 Leader character is `,`.
 
 In addition to Vim/NeoVim standard shortcuts, and standard shortcuts provided
-by the plugins, the following shorctuts are also mapped:
+by the plugins, the following shortcuts are also mapped:
 
 
 Shortcut | Name | Function
