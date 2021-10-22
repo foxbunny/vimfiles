@@ -19,7 +19,10 @@ configuration assumes vimdir is `~/.vim` (not the case on Windows).
 * [Keyboard shortcuts](#keyboard-shortcuts)
 * [Autocommands](#autocommands)
 * [Autosave](#autosave)
+* [Managing projects](#managing-projects)
 * [Screenshot](#screenshot)
+* [Troubleshooting](#troubleshooting)
+  * [JavaScript/TypeScript features are not working](#javascripttypescript-features-are-not-working)
 * [License](#license)
 
 <!-- vim-markdown-toc -->
@@ -52,6 +55,7 @@ Following editor features are provided:
 - Automatic vertical text alignment
 - Autocompletion in Vim command line
 - Autosave on focus loss or `<Esc>`
+- Simple project list
 
 There is no intellisense anywhere, and only basic omnicompletion, since I don't
 use it very much. Same goes for refactoring tools.
@@ -203,9 +207,45 @@ saved. This is done for the following file types:
 Files are automatically saved when we exit insert mode with `<Esc>` or when
 Vim loses focus (this only works in GUI mode).
 
+## Managing projects
+
+To avoid editing the `init.vim` configuration file, you can create the
+`machine.vim` file in your home directory and add project there. The projects
+are specified as per the [vim-project](https://github.com/amiorin/vim-project)
+configuration instructions.
+
+For example:
+
+```vim
+call project#rc('~/Code')
+
+Project 'vimfiles'
+Project 'awesome-app'
+```
+
 ## Screenshot
 
 ![Screenshot of the dark mode](screenshot.png)
+
+## Troubleshooting
+
+### JavaScript/TypeScript features are not working
+
+Node may not be in the `$PATH` for vim. Run the `:!which node` command, and if
+it does not find Node, that's the problem.
+
+You could try adding the path to the directory that contains the `node` binary
+to one of the following locations:
+
+1. in `~/.profile` file
+1. in `~/machine.vim` file
+
+To use the second option, create a file called `machine.vim` in your home
+directory, and add something like this to it:
+
+```vim
+let $PATH = $PATH . ':' . $HOME . '/.local/share/nvm/v14.18.1/bin'
+```
 
 ## License
 
