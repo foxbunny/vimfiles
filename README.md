@@ -76,7 +76,11 @@ TL;DR
 - Iosevka font and Sarasa Gothic font
 
 You will need to install Vim (d'oh!) and [ack](https://beyondgrep.com/) or
-[ag](https://geoff.greer.fm/ag/) (for searching with Ack).
+[ag](https://geoff.greer.fm/ag/) (for searching with Ack). On Ubuntu:
+
+```bash
+sudo apt install silversearcher-ag
+```
 
 Packages are managed by [vim-plug](https://github.com/junegunn/vim-plug).
 Because vimrc includes an automatic install script, you need to have curl
