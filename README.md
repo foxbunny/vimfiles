@@ -99,7 +99,13 @@ variant) and [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic/releases)
 To install, just clone the project to a local directory:
 
 ```shell
-git clone https://github.com/foxbunny/vimfiles.git
+git clone https://github.com/foxbunny/vimfiles.git ~/.vim
+```
+
+Install vim-plug:
+
+```shell
+bash ~/.vim/getplug.sh
 ```
 
 Finally, create two directories in your home directory or `%userprofile%`
