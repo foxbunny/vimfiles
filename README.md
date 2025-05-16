@@ -102,31 +102,27 @@ To install, just clone the project to a local directory:
 git clone https://github.com/foxbunny/vimfiles.git ~/.vim
 ```
 
-Install vim-plug:
+Finish the setup:
 
 ```shell
-bash ~/.vim/getplug.sh
+bash ~/.vim/setup.sh
 ```
 
-Finally, create two directories in your home directory or `%userprofile%`
-folder (not needed for NeoVim):
+The setup script will install vim-plug and create the necessary directories:
 
 - `.vim_undo` for persistent undo
 - `.vim_swap` for storing swap files in a single folder
 
-When starting for the first time, run `:PlugInstall` to install all the
-plugins, then restart.
+It will also symlink `init.vim` to `~/.vimrc`.
+
+The setup script is not available for Windows, so you'll have to manually
+create the two directories and the symlink, and install vim-plug as per the
+official instructions.
 
 ## Using the configuration
 
 NeoVim used to be supported, but I no longer use it, so you're on your own.
 Some things may not work as expected.
-
-Symlink the git folder to `~/.vim`:
-
-```
-ln -s /path/to/vimfiles.git ~/.vim
-```
 
 Also symlink the main configuration file:
 
@@ -136,9 +132,8 @@ ln -s /path/to/vimfiles.git/init.vim ~/.vimrc
 
 ## Initializing the plugins
 
-The first time you start Vim or NeoVim with this configuration, vim-plug will
-automatically install itself and any missing plugins. You generally shouldn't
-need to do anything.
+When starting for the first time, run `:PlugInstall` to install all the
+plugins, then restart.
 
 ## Machine-specific configuration
 
