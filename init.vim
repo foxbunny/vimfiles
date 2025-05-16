@@ -45,7 +45,6 @@ Plug 'jonathanfilip/vim-lucius'
 
 " Editing aids
 Plug 'Raimondi/delimitMate'
-Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdcommenter'
@@ -79,6 +78,9 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
 Plug 'ekalinin/Dockerfile.vim', { 'for': 'Dockerfile' }
 Plug 'fatih/vim-go', { 'for': 'go' }
+
+" Language servers
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
